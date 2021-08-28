@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mabimg::마비노기 커스텀 이미지 제작 사이트</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script>
+    $(function(){
+      $("#menu").load("include/menu.html");
+    });
+    </script>
+    <img src="imgs/" id="basic_img" class="hidden">
+</head>
+<body>
+
+<div id="menu"></div>
+
+<section>
+    <div class="content">
+        <div class="info">
+            <h1>SIMPLE! 자기소개!</h1>
+            <p>심플한 자기소개 이미지 생성 페이지.</p>
+            <p>아래 칸에 필요한 정보를 입력해주세요.</p>
+
+            <h3>게임 정보</h3>
+            <p>
+                <label>
+                    프로필 이미지 :
+                </label>
+                <input type="file" name="profile_img" id="profile_img">
+            </p>
+            <p>
+                <label>
+                    서버 :
+                </label>
+                <input type="text" name="server" id="server">
+            </p>
+            <p>
+                <label>
+                    캐릭터명 :
+                </label>
+                <input type="text" name="charname" id="charname">
+            </p>
+            <p>
+                <label>
+                    부를 때 :
+                </label>
+                <input type="text" name="talent" id="talent">
+            </p>
+            <p>
+                <label>
+                    종족 :
+                </label>
+                <select name="race" id="race">
+                    <option value selected>종족을 고르세요</option>
+                    <option value="인간">인간</option>
+                    <option value="엘프">엘프</option>
+                    <option value="자이언트">자이언트</option>
+                </select>
+            </p>
+            <p>
+                <label>
+                    길드 :
+                </label>
+                <input type="text" name="guild" id="guild">
+            </p>
+            <p>
+                <label>
+                    누적레벨 :
+                </label>
+                <input type="text" name="level" id="level">
+            </p>
+
+            <h3>플레이어 정보</h3>
+            <p>
+                <label>
+                    나이 :
+                </label>
+                <select name="age" id="age">
+                    <option value selected>나이를 선택하세요</option>
+                    <option value="미성년자">미성년자</option>
+                    <option value="성인">성인</option>
+                    <option value="비공개">비공개</option>
+                </select>
+            </p>
+        </div>
+        <div class="image">
+            <h2>이미지 결과물</h2>
+            <p>
+                <button id="draw">이미지 생성</button>
+                <button id="download">다운로드</button>
+            </p>
+            <div onload="draw();">
+                <canvas id="canvas" width="1200" height="675" style="position: relative;"></canvas>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>

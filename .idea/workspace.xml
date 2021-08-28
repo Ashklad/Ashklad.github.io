@@ -2,8 +2,59 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd978d5d-6670-4d4b-b838-31f0f43d6436" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/simple_main_custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/jquery-3.6.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/body.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/head.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/metadata-home.json.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/metadata-post.json.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/metadata.json.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/search.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/toc-date.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/toc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/post.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-04-27-why.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-04-28-howto.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-04-29-license.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2021-08-10-toc.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitbook/fonts/fontawesome/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitbook/fonts/fontawesome/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitbook/fonts/fontawesome/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitbook/fonts/fontawesome/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitbook/fonts/fontawesome/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitbook/fonts/fontawesome/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitbook/gitbook-plugin-fontsettings/fontsettings.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitbook/gitbook-plugin-fontsettings/website.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitbook/gitbook-plugin-lunr/lunr.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitbook/gitbook-plugin-lunr/search-lunr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitbook/gitbook-plugin-search/lunr.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitbook/gitbook-plugin-search/search-engine.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitbook/gitbook-plugin-search/search.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitbook/gitbook-plugin-search/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitbook/gitbook-plugin-sharing/buttons.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitbook/gitbook.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitbook/images/apple-touch-icon-precomposed-152.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitbook/images/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitbook/rouge-highlight-colorful.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitbook/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitbook/theme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old_index.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +64,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Python Script" />
         <option value="HTML File" />
       </list>
     </option>
@@ -30,7 +82,13 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jekyll/jekyll-gitbook-master/jekyll-gitbook-master" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programming\Ashklad.github.io\imageditor" />
+      <recent name="D:\Programming\Ashklad.github.io" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
