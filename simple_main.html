@@ -18,6 +18,9 @@
 <div id="menu"></div>
 
 <section>
+    <img src="imgs/simple_profile.png" id="simple_profile" class="hidden">
+    <img src="imgs/simple_background.png" id="simple_background" class="hidden">
+    <img src="imgs/simple_backplate.png" id="simple_backplate" class="hidden">
     <div class="content">
         <div class="info">
             <h1>SIMPLE! 자기소개!</h1>
@@ -26,28 +29,40 @@
 
             <h3>게임 정보</h3>
             <p>
-                <label for="profile_img">
+                <label>
                     프로필 이미지 :
                 </label>
                 <input type="file" id="profile_img" accept="image/*">
             </p>
+            <p>프로필 이미지는 500 * 180 사이즈가 기본입니다.</p>
+            <p>
+                <label>배경화면 이미지 : </label>
+                <input type="file" id="background_img" accept="image/*">
+            </p>
+            <p>배경화면 이미지는 스테이터스 창 밖 배경을 구성하는 이미지입니다.</p>
             <p>
                 <label>
                     서버 :
                 </label>
-                <input type="text" name="server" id="server">
+                <select name="server" id="server">
+                    <option value selected>서버를 선택하세요</option>
+                    <option value="류트">류트</option>
+                    <option value="울프">울프</option>
+                    <option value="하프">하프</option>
+                    <option value="만돌린">만돌린</option>
+                </select>
             </p>
             <p>
                 <label>
                     캐릭터명 :
                 </label>
-                <input type="text" name="charname" id="charname">
+                <input type="text" name="chara_name" id="chara_name">
             </p>
             <p>
                 <label>
                     부를 때 :
                 </label>
-                <input type="text" name="talent" id="talent">
+                <input type="text" name="nickname" id="nickname">
             </p>
             <p>
                 <label>
@@ -69,9 +84,9 @@
             <p>
                 <strong>결혼여부</strong>
                 <label>미혼</label>
-                <input type="radio" name="married" value="no">
+                <input type="radio" name="married" value="미혼" sele>
                 <label>기혼</label>
-                <input type="radio" name="married" value="yes">
+                <input type="radio" name="married" value="기혼">
             </p>
             <p>
                 <label>패밀리</label>
@@ -108,95 +123,95 @@
                 <label>
                     새벽
                 </label>
-                <input type="checkbox" id="weekday_dawn">
+                <input type="checkbox" id="weekday_0">
                 <label>
                     오전
                 </label>
-                <input type="checkbox" id="weekday_morning">
+                <input type="checkbox" id="weekday_1">
                 <label>
                     낮
                 </label>
-                <input type="checkbox" id="weekday_noon">
+                <input type="checkbox" id="weekday_2">
                 <label>
                     저녁
                 </label>
-                <input type="checkbox" id="weekday_evening">
+                <input type="checkbox" id="weekday_3">
                 <label>
                     밤
                 </label>
-                <input type="checkbox" id="weekday_night">
+                <input type="checkbox" id="weekday_4">
             </p>
             <p>
                 <strong>주말</strong>
                 <label>
                     새벽
                 </label>
-                <input type="checkbox" id="weekend_dawn">
+                <input type="checkbox" id="weekend_0">
                 <label>
                     오전
                 </label>
-                <input type="checkbox" id="weekend_morning">
+                <input type="checkbox" id="weekend_1">
                 <label>
                     낮
                 </label>
-                <input type="checkbox" id="weekend_noon">
+                <input type="checkbox" id="weekend_2">
                 <label>
                     저녁
                 </label>
-                <input type="checkbox" id="weekend_evening">
+                <input type="checkbox" id="weekend_3">
                 <label>
                     밤
                 </label>
-                <input type="checkbox" id="weekend_night">
+                <input type="checkbox" id="weekend_4">
             </p>
             <h4>플레이타입</h4>
             <p>
                 <label>
                     석상
                 </label>
-                <input type="checkbox" id="statue">
+                <input type="checkbox" id="playType_0">
                 <label>
                     사냥
                 </label>
-                <input type="checkbox" id="hunt">
+                <input type="checkbox" id="playType_1">
                 <label>
                     합주
                 </label>
-                <input type="checkbox" id="orchestra">
+                <input type="checkbox" id="playType_2">
                 <label>
                     의장
                 </label>
-                <input type="checkbox" id="look">
+                <input type="checkbox" id="playType_3">
                 <label>
                     수련
                 </label>
-                <input type="checkbox" id="training">
+                <input type="checkbox" id="playType_4">
                 <label>
                     키트
                 </label>
-                <input type="checkbox" id="kit">
+                <input type="checkbox" id="playType_5">
                 <label>
                     수집
                 </label>
-                <input type="checkbox" id="collection">
+                <input type="checkbox" id="playType_6">
             </p>
             <p>
                 <label>
                     저널
                 </label>
-                <input type="checkbox" id="journal">
+                <input type="checkbox" id="playType_7">
                 <label>
                     탐험
                 </label>
-                <input type="checkbox" id="adventure">
+                <input type="checkbox" id="playType_8">
                 <label>
                     낭농
                 </label>
-                <input type="checkbox" id="romance_farm">
+                <input type="checkbox" id="playType_9">
                 <label>
                     지령
                 </label>
-                <input type="checkbox" id="sado">
+                <input type="checkbox" id="playType_10">
             </p>
             <p>
                 <label>
@@ -217,16 +232,16 @@
             <p>
                 <strong>스포일러 여부</strong>
                 <label>함</label>
-                <input type="radio" name="spoiler_do" value="yes">
+                <input type="radio" name="spoiler_do" value="함">
                 <label>안함</label>
-                <input type="radio" name="spoiler_do" value="no">
+                <input type="radio" name="spoiler_do" value="안함">
             </p>
             <p>
                 <strong>스포일러 민감도</strong>
                 <label>싫어요!</label>
-                <input type="radio" name="spoiler_in" value="no">
+                <input type="radio" name="spoiler_in" value="싫어요!">
                 <label>괜찮아요</label>
-                <input type="radio" name="spoiler_in" value="yes">
+                <input type="radio" name="spoiler_in" value="괜찮아요">
             </p>
             <p>
                 <label>지뢰</label>
@@ -242,7 +257,7 @@
         <div class="image">
             <h2>이미지 결과물</h2>
             <p>
-                <button id="draw">이미지 생성</button>
+                <button id="apply">이미지 적용</button>
                 <button id="download">다운로드</button>
             </p>
             <div id="canvas_frame">
