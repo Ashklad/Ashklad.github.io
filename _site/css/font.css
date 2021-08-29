@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'NexonLv2Gothic';
+    src: url('../fonts/NEXON Lv2 Gothic.woff') format('woff');
+}
+@font-face {
+    font-family: 'NexonLv2GothicBold';
+    src: url('../fonts/NEXON Lv2 Gothic Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'NexonLv2Gothic';
+    src: url('../fonts/NEXON Lv2 Gothic Light.woff') format('woff');
+}

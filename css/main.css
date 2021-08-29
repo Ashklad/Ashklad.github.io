@@ -1,3 +1,5 @@
+@import url(./font.css);
+
 nav {
     width: 200px;
     background-color:#eee;
@@ -44,4 +46,9 @@ section{
 }
 .hidden {
     display: none;
+}
+canvas {
+    border: solid 1px;
+    # margin: 1em;
+    # width: calc(100% - 2em);
 }
