@@ -127,7 +127,7 @@ $(document).ready(function() {
         ctx.fillText('하고싶은말', 660, 500);
 
         // content
-        ctx.font = "18px NexonLv2Gothic";
+        ctx.font = "18px NexonLv2GothicBold";
         ctx.shadowBlur = 0;
 
         ctx.fillText(chara_name, 200, 400);
@@ -163,8 +163,8 @@ $(document).ready(function() {
 
         var play_type_label_1 = ["석상", "사냥", "합주", "의장", "수련", "키트", "수집"]
         var play_type_label_2 = ["저널", "탐험", "낭농", "지령"]
-        boolDraw(ctx, play_type_label_1, "playType", 710, 270)
-        boolDraw(ctx, play_type_label_2, "playType", 710, 300)
+        boolDraw(ctx, play_type_label_1, "playType1", 710, 270)
+        boolDraw(ctx, play_type_label_2, "playType2", 710, 300)
 
         // colors
 
