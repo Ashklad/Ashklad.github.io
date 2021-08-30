@@ -95,15 +95,13 @@ $(document).ready(function() {
 
         ctx.drawImage(background_img, 0, 0, WIDTH, HEIGHT);
         ctx.drawImage(backplate_img, 0, 0, WIDTH, HEIGHT);
-        ctx.drawImage(profile_img, 70, 160, 500, 180);
+        ctx.drawImage(profile_img, 60, 78, 516, 266);
 
         // categories
         ctx.font = '18px NexonLv2GothicBold';
         ctx.fillStyle = "rgb(255, 255, 255)";
         ctx.shadowColor = "black";
         ctx.shadowBlur = 10;
-
-        ctx.fillText('서버', 320, 120);
 
         ctx.fillText('캐릭터명', 100, 400);
         ctx.fillText('호칭', 100, 430);
@@ -117,20 +115,21 @@ $(document).ready(function() {
 
         // ctx.fillText('지향색', 100, 540);
 
-        ctx.fillText('나이', 660, 120);
-        ctx.fillText('플레이시간', 660, 150);
+        ctx.fillText('서버', 660, 95);
+        ctx.fillText('나이', 660, 125);
+        ctx.fillText('플레이시간', 660, 155);
 
-        ctx.fillText('평일', 690, 180);
-        ctx.fillText('주말', 690, 210);
+        ctx.fillText('평일', 690, 185);
+        ctx.fillText('주말', 690, 215);
 
-        ctx.fillText('플레이타입', 660, 240);
+        ctx.fillText('플레이타입', 660, 245);
 
-        ctx.fillText('주 채널', 660, 330);
-        ctx.fillText('스포일러', 660, 360);  ctx.fillText('여부', 740, 360);
-                                            ctx.fillText('민감도', 740, 390);
+        ctx.fillText('주 채널', 660, 335);
+        ctx.fillText('스포일러', 660, 365);  ctx.fillText('여부', 740, 365);
+                                            ctx.fillText('민감도', 740, 395);
 
-        ctx.fillText('지뢰', 660, 420);
-        ctx.fillText('지뢰대응', 660, 450);
+        ctx.fillText('지뢰', 660, 425);
+        ctx.fillText('지뢰대응', 660, 455);
         ctx.fillText('하고싶은말', 660, 500);
 
         // content
@@ -146,32 +145,32 @@ $(document).ready(function() {
         // ctx.fillText(married, 450, 430); // --> 이건 select 로
         ctx.fillText(family, 450, 460);
         ctx.fillText(main_play, 450, 490);
-        ctx.fillText(my_channel + " 채널", 750, 330);
-        ctx.fillText(bomb, 750, 420);
-        ctx.fillText(bomb_solve, 750, 450);
-        ctx.fillText(etc_talk, 650, 560)  // todo: 줄바꿈
+        ctx.fillText(my_channel + " 채널", 750, 335);
+        ctx.fillText(bomb, 750, 425);
+        ctx.fillText(bomb_solve, 750, 455);
+        ctx.fillText(etc_talk, 675, 550)  // todo: 줄바꿈
 
         // select content
         var channel_label = ["류트", "울프", "하프", "만돌린"]
-        selectDraw(ctx, channel_label, channel_name, 370, 120);
+        selectDraw(ctx, channel_label, channel_name, 740, 95);
 
         var age_label = ["미성년자", "성인", "비공개"]
-        selectDraw(ctx, age_label, age, 800, 120)
+        selectDraw(ctx, age_label, age, 740, 125)
 
         // radio content
         radioDraw(ctx, married, 450, 430);
-        radioDraw(ctx, spoiler_do, 820, 360);
-        radioDraw(ctx, spoiler_in, 820, 390);
+        radioDraw(ctx, spoiler_do, 820, 365);
+        radioDraw(ctx, spoiler_in, 820, 395);
 
         // bool content
         var time_label = ["새벽", "오전", "낮", "저녁", "밤"]
-        boolDraw(ctx, time_label, "weekday", 760, 180)
-        boolDraw(ctx, time_label, "weekend", 760, 210)
+        boolDraw(ctx, time_label, "weekday", 760, 185)
+        boolDraw(ctx, time_label, "weekend", 760, 215)
 
         var play_type_label_1 = ["석상", "사냥", "합주", "의장", "수련", "키트", "수집"]
         var play_type_label_2 = ["저널", "탐험", "낭농", "지령"]
-        boolDraw(ctx, play_type_label_1, "playType1", 710, 270)
-        boolDraw(ctx, play_type_label_2, "playType2", 710, 300)
+        boolDraw(ctx, play_type_label_1, "playType1", 690, 275)
+        boolDraw(ctx, play_type_label_2, "playType2", 690, 305)
 
         // colors
         ctx.font = "10px NexonLv2GothicBold";
