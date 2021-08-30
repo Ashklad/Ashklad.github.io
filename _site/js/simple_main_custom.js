@@ -177,7 +177,6 @@ $(document).ready(function() {
         if (color_max > 5) {color_max = 5};
         if (color_max < 1) {color_max = 1};
         color_start_point = 270 - (color_max * 40)
-        console.log(color_start_point)
         for (now_index = 1; now_index <= color_max; now_index++) {
             select_color = $("#color" + now_index).val();
             ctx.fillStyle = select_color;

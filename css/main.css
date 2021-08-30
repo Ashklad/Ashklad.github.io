@@ -1,7 +1,7 @@
 @import url(./font.css);
 
 nav {
-    width: 200px;
+    width: 15%;
     background-color:#eee;
     border-right:1px solid #ddd;
     position: fixed;
@@ -14,7 +14,7 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 200px;
+    width: relative;
     background-color: #f1f1f1;
 }
 .menu li a {
@@ -34,8 +34,30 @@ ul {
 
 section{
     padding-top:50px;
-    padding-left:250px;
+    padding-left:20%;
+    padding-right:10%;
+    font-family: "NexonLv2Gothic", sans-serif;
 }
+
+section > h1, h2 {
+    background-color: #a6bfb8;
+    font-family: 'NexonLv2GothicBold', sans-serif;
+}
+
+section > h3 {
+    background-color: #f1f1f1;
+    font-family: 'NexonLv2GothicBold', sans-serif;
+}
+
+section > p > strong {
+    padding-right: 20px;
+}
+
+section > p > input[type=color] {
+    margin-left: 5px;
+    margin-right: 20px;
+}
+
 .content:after {content:""; clear:both; display:block;}
 .content > div {
     float:left;
