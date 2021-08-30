@@ -1,5 +1,14 @@
 @import url(./font.css);
 
+body {
+    background-color: #fff;
+    background-image:
+    linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+    linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.2em;
+    /* Pattern from : https://projects.verou.me/css3patterns/#lined-paper */
+}
+
 nav {
     width: 15%;
     background-color:#eee;
@@ -33,10 +42,14 @@ ul {
 }
 
 section{
-    padding-top:50px;
-    padding-left:20%;
-    padding-right:10%;
+    margin-left:20%;
+    margin-right:10%;
+    padding:3%;
     font-family: "NexonLv2Gothic", sans-serif;
+    border-style: solid;
+    border-color: #d6dde5;
+    border-width: 10px;
+    background-color: #ffffff;
 }
 
 section > h1, h2 {
