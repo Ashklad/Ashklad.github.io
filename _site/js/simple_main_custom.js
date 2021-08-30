@@ -8,19 +8,15 @@ $(document).ready(function() {
 
     var backplate_img = document.getElementById("simple_backplate")
 
-    var color1 = "rgb(255,0,0)";
-    var color2 = "rgb(255,0,0)";
-    var color3 = "rgb(255,0,0)";
-    var color4 = "rgb(255,0,0)";
-
     function selectDraw(ctx, label, target_name, x, y){
         var x_offset = 0;
+        var highlight_color = $("#highlight").val();
         for (var now_index in label) {
             var now_name = label[now_index]
             if (target_name == now_name) {
-                ctx.fillStyle = "rgb(255, 255, 255)"
+                ctx.fillStyle = highlight_color;
             } else {
-                ctx.fillStyle = "rgb(127, 127, 127)"
+                ctx.fillStyle = "rgb(127, 127, 127)";
             }
             ctx.fillText(now_name, x + x_offset, y);
             x_offset += now_name.length * 18 + 15;
@@ -29,12 +25,13 @@ $(document).ready(function() {
 
     function radioDraw(ctx, radio, x, y){
         var x_offset = 0;
+        var highlight_color = $("#highlight").val();
         for (var now_index = 0, length = radio.length; now_index < length; now_index++) {
             var now_value = radio[now_index].value;
             if (radio[now_index].checked) {
-                ctx.fillStyle = "rgb(255, 255, 255)"
+                ctx.fillStyle = highlight_color;
             } else {
-                ctx.fillStyle = "rgb(127, 127, 127)"
+                ctx.fillStyle = "rgb(127, 127, 127)";
             }
             ctx.fillText(now_value, x + x_offset, y);
             x_offset += now_value.length * 18 + 15;
@@ -43,13 +40,14 @@ $(document).ready(function() {
 
     function boolDraw(ctx, label, baseString, x, y) {
         var x_offset = 0;
+        var highlight_color = $("#highlight").val();
         for (var now_index in label) {
             var now_name = label[now_index]
             var target_id = "#" + baseString + "_" + now_index
             if ($(target_id).is(":checked")) {
-                ctx.fillStyle = "rgb(255, 255, 255)"
+                ctx.fillStyle = highlight_color;
             } else {
-                ctx.fillStyle = "rgb(127, 127, 127)"
+                ctx.fillStyle = "rgb(127, 127, 127)";
             }
             ctx.fillText(now_name, x + x_offset, y);
             x_offset += now_name.length * 18 + 15;
@@ -194,7 +192,7 @@ $(document).ready(function() {
             select_color = $("#color" + now_index).val();
             ctx.strokeRect(color_start_point + 105 * (now_index - 1), 530, 85, 85);
             if (select_color == "#ffffff") { ctx.fillStyle = "#000000"; }
-            ctx.fillText("(" + hexToRgb(select_color) + ")", color_start_point + 105 * (now_index - 1), 605);
+            ctx.fillText("(" + hexToRgb(select_color) + ")", 7 + color_start_point + 105 * (now_index - 1), 605);
             ctx.fillStyle = "#ffffff";
         }
 
