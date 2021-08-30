@@ -8,6 +8,11 @@ $(document).ready(function() {
 
     var backplate_img = document.getElementById("simple_backplate")
 
+    var color1 = "rgb(255,0,0)";
+    var color2 = "rgb(255,0,0)";
+    var color3 = "rgb(255,0,0)";
+    var color4 = "rgb(255,0,0)";
+
     function selectDraw(ctx, label, target_name, x, y){
         var x_offset = 0;
         for (var now_index in label) {
@@ -68,14 +73,18 @@ $(document).ready(function() {
         var main_play = $("#main_play").val();
 
         var my_channel = $("#my_channel").val();
+
+        var bomb = $("#bomb").val();
+        var bomb_solve = $("#bomb_solve").val();
+        var etc_talk = $("#etc_talk").val();
+
         var color1 = $("#color1").val();
         var color2 = $("#color2").val();
         var color3 = $("#color3").val();
         var color4 = $("#color4").val();
 
-        var bomb = $("#bomb").val();
-        var bomb_solve = $("#bomb_solve").val();
-        var etc_talk = $("#etc_talk").val();
+        var stroke_color = $("#stroke_color").val();
+        var color_max = $("#color_max").val();
 
         // radio image
         var married = document.getElementsByName("married");
@@ -108,7 +117,7 @@ $(document).ready(function() {
         ctx.fillText('패밀리', 350, 460);
         ctx.fillText('메인진행', 350, 490);
 
-        ctx.fillText('지향색', 100, 540);
+        // ctx.fillText('지향색', 100, 540);
 
         ctx.fillText('나이', 660, 120);
         ctx.fillText('플레이시간', 660, 150);
@@ -167,11 +176,33 @@ $(document).ready(function() {
         boolDraw(ctx, play_type_label_2, "playType2", 710, 300)
 
         // colors
+        ctx.font = "10px NexonLv2GothicBold";
+        if (color_max > 5) {color_max = 5};
+        if (color_max < 1) {color_max = 1};
+        color_start_point = 270 - (color_max * 40)
+        console.log(color_start_point)
+        for (now_index = 1; now_index <= color_max; now_index++) {
+            select_color = $("#color" + now_index).val();
+            ctx.fillStyle = select_color;
+            ctx.fillRect(color_start_point + 105 * (now_index - 1), 530, 85, 85);
+        }
 
+        ctx.strokeStyle = stroke_color;
+        ctx.fillStyle = "rgb(255, 255, 255)";
+        ctx.lineWidth = 3;
+        for (now_index = 1; now_index <= color_max; now_index++) {
+            select_color = $("#color" + now_index).val();
+            ctx.strokeRect(color_start_point + 105 * (now_index - 1), 530, 85, 85);
+            if (select_color == "#ffffff") { ctx.fillStyle = "#000000"; }
+            ctx.fillText("(" + hexToRgb(select_color) + ")", color_start_point + 105 * (now_index - 1), 605);
+            ctx.fillStyle = "#ffffff";
+        }
 
         // 폰트 초기화
         ctx.font = '18px NexonLv2GothicBold';
         ctx.fillStyle = "rgb(255, 255, 255)";
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = 1;
         ctx.shadowBlur = 0;
     }
 
@@ -180,6 +211,21 @@ $(document).ready(function() {
         link.download = prefix + Date.now() + '.png';
         link.href = document.getElementById('canvas').toDataURL()
         link.click();
+    }
+
+	function colorChange(e, colorObj) {
+	    colorObj = this.value;
+	}
+
+	function hexToRgb(hex) {
+        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+        if(result){
+            var r= parseInt(result[1], 16);
+            var g= parseInt(result[2], 16);
+            var b= parseInt(result[3], 16);
+            return r+","+g+","+b;//return 23,14,45 -> reformat if needed
+        }
+        return null;
     }
 
     $('#apply').click(function() {
@@ -197,6 +243,8 @@ $(document).ready(function() {
     });
     $('input[type=checkbox], select').change(draw);
 	$('input[type=select], change').change(draw);
+
+    $("#color1").change(colorChange)
 
 	function readImage(input, loadImageId){
 	    if (input.files && input.files[0]) {
