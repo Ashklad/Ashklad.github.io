@@ -54,6 +54,22 @@ $(document).ready(function() {
         }
     }
 
+    function drawRatio(ctx, imgObj, target_width, target_height, start_x, start_y) {
+        w = imgObj.width
+        h = imgObj.height
+
+        target_ratio = target_width / target_height
+        img_ratio = w / h
+
+        if (img_ratio > target_ratio) {
+            w = h * (target_width / target_height)
+        } else {
+            h = w * (target_height / target_width)
+        }
+
+        ctx.drawImage(imgObj, 0, 0, w, h, start_x, start_y, target_width, target_height);
+    }
+
     function draw() {
         // 이미지들
         var background_img = document.getElementById("simple_background")
@@ -88,9 +104,9 @@ $(document).ready(function() {
         var canvas = document.getElementById("canvas");
         var ctx = canvas.getContext("2d");
 
-        ctx.drawImage(background_img, 0, 0, WIDTH, HEIGHT);
+        drawRatio(ctx, background_img, WIDTH, HEIGHT, 0, 0);
         ctx.drawImage(backplate_img, 0, 0, WIDTH, HEIGHT);
-        ctx.drawImage(profile_img, 60, 78, 516, 266);
+        drawRatio(ctx, profile_img, 516, 266, 60, 78);
 
         // categories
         ctx.font = '18px NexonLv2GothicBold';
