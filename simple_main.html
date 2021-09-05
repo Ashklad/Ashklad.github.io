@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Mabimg::마비노기 커스텀 이미지 제작 사이트</title>
@@ -221,18 +221,49 @@
         <input type="number" id="my_channel" min="1" max="99">
     </p>
     <p>
-        <label>지향색1</label>
-        <input type="color" id="color1" value="#ffffff">
-        <label>지향색2</label>
-        <input type="color" id="color2" value="#ffffff">
+        <label style="padding-right: 20px;">지향색1</label>
+        <span>
+        <strong> R </strong><input type="number" min="0" max="255" value="255" id="color1_r">
+        <strong> G </strong><input type="number" min="0" max="255" value="255" id="color1_g">
+        <strong> B </strong><input type="number" min="0" max="255" value="255" id="color1_b">
+        </span>
+        <span id="color1_preview" style="color:white;">■</span>
     </p>
     <p>
-        <label>지향색3</label>
-        <input type="color" id="color3" value="#ffffff">
-        <label>지향색4</label>
-        <input type="color" id="color4" value="#ffffff">
-        <label>지향색5</label>
-        <input type="color" id="color5" value="#ffffff">
+        <label style="padding-right: 20px;">지향색2</label>
+        <span>
+        <strong> R </strong><input type="number" min="0" max="255" value="255" id="color2_r">
+        <strong> G </strong><input type="number" min="0" max="255" value="255" id="color2_g">
+        <strong> B </strong><input type="number" min="0" max="255" value="255" id="color2_b">
+        </span>
+        <span id="color2_preview" style="color:white;">■</span>
+    </p>
+    <p>
+        <label style="padding-right: 20px;">지향색3</label>
+        <span>
+        <strong> R </strong><input type="number" min="0" max="255" value="255" id="color3_r">
+        <strong> G </strong><input type="number" min="0" max="255" value="255" id="color3_g">
+        <strong> B </strong><input type="number" min="0" max="255" value="255" id="color3_b">
+        </span>
+        <span id="color3_preview" style="color:white;">■</span>
+    </p>
+    <p>
+        <label style="padding-right: 20px;">지향색4</label>
+        <span>
+        <strong> R </strong><input type="number" min="0" max="255" value="255" id="color4_r">
+        <strong> G </strong><input type="number" min="0" max="255" value="255" id="color4_g">
+        <strong> B </strong><input type="number" min="0" max="255" value="255" id="color4_b">
+        </span>
+        <span id="color4_preview" style="color:white;">■</span>
+    </p>
+    <p>
+        <label style="padding-right: 20px;">지향색5</label>
+        <span>
+        <strong> R </strong><input type="number" min="0" max="255" value="255" id="color5_r">
+        <strong> G </strong><input type="number" min="0" max="255" value="255" id="color5_g">
+        <strong> B </strong><input type="number" min="0" max="255" value="255" id="color5_b">
+        </span>
+        <span id="color5_preview" style="color:white;">■</span>
     </p>
     <p>
         <label>지향색 외곽선 색</label>

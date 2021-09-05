@@ -76,11 +76,6 @@ $(document).ready(function() {
         var bomb_solve = $("#bomb_solve").val();
         var etc_talk = $("#etc_talk").val();
 
-        var color1 = $("#color1").val();
-        var color2 = $("#color2").val();
-        var color3 = $("#color3").val();
-        var color4 = $("#color4").val();
-
         var stroke_color = $("#stroke_color").val();
         var color_max = $("#color_max").val();
 
@@ -177,25 +172,51 @@ $(document).ready(function() {
         boolDraw(ctx, play_type_label_1, "playType1", 690, 275)
         boolDraw(ctx, play_type_label_2, "playType2", 690, 305)
 
+        // color set
+        color_list = []
+        for (now_index = 1; now_index <= 5; now_index++) {
+            r = parseInt($("#color" + now_index + "_r").val())
+            g = parseInt($("#color" + now_index + "_g").val())
+            b = parseInt($("#color" + now_index + "_b").val())
+            if (r < 0) {r = 0}; if (r > 255) {r = 255};
+            if (g < 0) {g = 0}; if (g > 255) {g = 255};
+            if (b < 0) {r = 0}; if (b > 255) {b = 255};
+            var color_obj = new Object();
+            color_obj.r = r;
+            color_obj.g = g;
+            color_obj.b = b;
+            color_list.push(color_obj);
+        }
+
+        // color_preview
+        for (now_index = 0; now_index < 5; now_index++) {
+            color_obj = color_list[now_index]
+            select_color = "rgb(" + color_obj.r + "," + color_obj.g + "," + color_obj.b + ")"
+            preview_box = document.getElementById("color" + (now_index + 1) + "_preview");
+            preview_box.style.color = select_color;
+        }
+
         // colors
         ctx.font = "10px NexonLv2GothicBold";
         if (color_max > 5) {color_max = 5};
         if (color_max < 1) {color_max = 1};
         color_start_point = 270 - (color_max * 40)
-        for (now_index = 1; now_index <= color_max; now_index++) {
-            select_color = $("#color" + now_index).val();
+        for (now_index = 0; now_index < color_max; now_index++) {
+            color_obj = color_list[now_index]
+            select_color = "rgb(" + color_obj.r + "," + color_obj.g + "," + color_obj.b + ")"
             ctx.fillStyle = select_color;
-            ctx.fillRect(color_start_point + 105 * (now_index - 1), 530, 85, 85);
+            ctx.fillRect(color_start_point + 105 * now_index, 530, 85, 85);
         }
 
         ctx.strokeStyle = stroke_color;
         ctx.fillStyle = "rgb(255, 255, 255)";
         ctx.lineWidth = 3;
-        for (now_index = 1; now_index <= color_max; now_index++) {
-            select_color = $("#color" + now_index).val();
-            ctx.strokeRect(color_start_point + 105 * (now_index - 1), 530, 85, 85);
-            if (select_color == "#ffffff") { ctx.fillStyle = "#000000"; }
-            ctx.fillText("(" + hexToRgb(select_color) + ")", 7 + color_start_point + 105 * (now_index - 1), 605);
+        for (now_index = 0; now_index < color_max; now_index++) {
+            color_obj = color_list[now_index]
+            select_color = "(" + color_obj.r + "," + color_obj.g + "," + color_obj.b + ")"
+            ctx.strokeRect(color_start_point + 105 * now_index, 530, 85, 85);
+            if (select_color == "(255,255,255)") { ctx.fillStyle = "#000000"; }
+            ctx.fillText(select_color, 7 + color_start_point + 105 * now_index, 605);
             ctx.fillStyle = "#ffffff";
         }
 
@@ -244,8 +265,6 @@ $(document).ready(function() {
     });
     $('input[type=checkbox], select').change(draw);
 	$('input[type=select], change').change(draw);
-
-    $("#color1").change(colorChange)
 
 	function readImage(input, loadImageId){
 	    if (input.files && input.files[0]) {
