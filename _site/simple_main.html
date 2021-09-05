@@ -3,27 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Mabimg::마비노기 커스텀 이미지 제작 사이트</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./imgs/dancing_mile.png">
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <link href="css/font.css" rel="stylesheet" type="text/css">
     <script src="libs/jquery-3.6.0.min.js"></script>
     <script src="js/simple_main_custom.js"></script>
-    <script>
-    $(function(){
-      $("#menu").load("include/menu.html");
-    });
-    </script>
+    <script src="js/element_join.js"></script>
 </head>
 <body>
 
 <div id="menu"></div>
 
-<section id="input_sheet">
+<section class="input_sheet">
     <img src="imgs/simple_profile.png" id="simple_profile" class="hidden">
     <img src="imgs/simple_background.png" id="simple_background" class="hidden">
     <img src="imgs/simple_backplate.png" id="simple_backplate" class="hidden">
     <h1>SIMPLE! 자기소개!</h1>
-    <p>심플한 자기소개 이미지 생성 페이지.</p>
-    <p>아래 칸에 필요한 정보를 입력해주세요.</p>
+    <p class="explain">심플한 자기소개 이미지 생성 페이지.</p>
+    <p class="explain">아래 칸에 필요한 정보를 입력해주세요.</p>
 
     <h3>시트 설정</h3>
     <p>
@@ -38,12 +35,12 @@
         </label>
         <input type="file" id="profile_img" accept="image/*">
     </p>
-    <p>프로필 이미지는 516 * 266 사이즈를 기본으로 맞춰집니다.</p>
+    <p class="explain">프로필 이미지는 516 * 266 사이즈를 기본으로 맞춰집니다.</p>
     <p>
         <label>배경화면 이미지 : </label>
         <input type="file" id="background_img" accept="image/*">
     </p>
-    <p>배경화면 이미지는 스테이터스 창 밖 배경을 구성하는 이미지입니다.</p>
+    <p class="explain">배경화면 이미지는 스테이터스 창 밖 배경을 구성하는 이미지입니다.</p>
     <p>
         <label>
             서버 :
@@ -243,7 +240,7 @@
     </p>
     <p>
         <label>지향색 개수</label>
-        <label>(설정한 개수만큼 출력됩니다. 최대 5개까지.)</label>
+        <label class="explain">설정한 개수만큼 출력됩니다. 최대 5개까지.</label>
         <input type="number" id="color_max" min=1 max=5 value=1>
     </p>
     <p>
@@ -269,7 +266,7 @@
         <input type="text" id="bomb_solve">
     </p>
     <p><label>하고 싶은 말</label></p>
-    <p><input type="text" id="etc_talk" style="width:100%; height:200px;"></p>
+    <p><textarea id="etc_talk" style="width:100%; height:200px; word-wrap:break-all;"></textarea></p>
     <h2>이미지 결과물</h2>
     <p>
         <button id="apply">이미지 적용</button>
@@ -278,8 +275,16 @@
     <div id="canvas_frame">
         <canvas id="canvas" width="1200" height="675" style="position: relative;"></canvas>
     </div>
+    <br>
+    <div class="use_info">
+        <p>이 페이지에서 생성한 이미지는 비영리적인 선에서 자유롭게 사용하실 수 있습니다.</p>
+        <p>수정 가능, 재배포 가능. 출처 사이트 URL만 지우지 말아주세요!</p>
+        <p>(사이트 URL의 위치, 선색 등의 변형은 가능합니다)</p>
+    </div>
 
 </section>
+
+<div id="footer"></div>
 
 </body>
 </html>

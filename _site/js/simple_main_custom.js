@@ -148,7 +148,12 @@ $(document).ready(function() {
         ctx.fillText(my_channel + " 채널", 750, 335);
         ctx.fillText(bomb, 750, 425);
         ctx.fillText(bomb_solve, 750, 455);
-        ctx.fillText(etc_talk, 675, 550)  // todo: 줄바꿈
+
+        const etc_talks = etc_talk.split("\n")
+        for (var etc_index in etc_talks) {
+            if (etc_index > 3) { break; }
+            ctx.fillText(etc_talks[etc_index], 675, 550 + 20 * etc_index)
+        }
 
         // select content
         var channel_label = ["류트", "울프", "하프", "만돌린"]
