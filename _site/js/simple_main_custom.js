@@ -157,6 +157,9 @@ $(document).ready(function() {
         ctx.fillText(family, 450, 460);
         ctx.fillText(main_play, 450, 490);
         ctx.fillText(my_channel + " 채널", 750, 335);
+
+        // 직접 적는건 Bold보단 기본이 나은 것 같아서
+        ctx.font = "18px NexonLv2GothicLight";
         ctx.fillText(bomb, 750, 425);
         ctx.fillText(bomb_solve, 750, 455);
 
@@ -165,6 +168,7 @@ $(document).ready(function() {
             if (etc_index > 3) { break; }
             ctx.fillText(etc_talks[etc_index], 675, 550 + 20 * etc_index)
         }
+        ctx.font = "18px NexonLv2GothicBold";
 
         // select content
         var channel_label = ["류트", "울프", "하프", "만돌린"]
