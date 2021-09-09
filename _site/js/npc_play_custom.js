@@ -38,7 +38,7 @@ $(document).ready(function() {
         var canvas = document.getElementById("canvas");
         var ctx = canvas.getContext("2d");
 
-        drawRatio(ctx, background_img, WIDTH, HEIGHT, 0, 0);
+        drawRatio(ctx, background_img, WIDTH, HEIGHT, 0, 0);  // 이거 좀 이상함 디버깅 필요
         ctx.drawImage(npc_standing, 80, (HEIGHT - npc_standing.height), npc_standing.width, npc_standing.height);
         ctx.drawImage(down_gradation, 0, (HEIGHT - down_gradation.height), down_gradation.width, down_gradation.height);
 
@@ -64,6 +64,27 @@ $(document).ready(function() {
         link.href = document.getElementById('canvas').toDataURL()
         link.click();
     }
+
+    function readImage(input, loadImageId){
+	    if (input.files && input.files[0]) {
+	        const reader = new FileReader()
+	        reader.onload = e => {
+	            const loadImage = document.getElementById(loadImageId)
+	            loadImage.src = e.target.result
+	        }
+	        reader.readAsDataURL(input.files[0])
+	    }
+	}
+
+    const user_background_img = document.getElementById("background_img");
+	user_background_img.addEventListener("change", e => {
+        readImage(e.target, "npc_background")
+	});
+
+    const user_standing_img = document.getElementById("standing_img");
+	user_standing_img.addEventListener("change", e => {
+        readImage(e.target, "npc_standing")
+	});
 
     $('#apply').click(function() {
         draw();
