@@ -3,10 +3,40 @@
   <component name="ChangeListManager">
     <list default="true" id="cd978d5d-6670-4d4b-b838-31f0f43d6436" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/_site/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/css/font.css" beforeDir="false" afterPath="$PROJECT_DIR$/_site/css/font.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/imgs/dancing_mile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/imgs/npc2_down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/imgs/npc2_talk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/imgs/npc_down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/imgs/npc_talk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/imgs/profile_blank_img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/imgs/simple_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/imgs/simple_backplate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/imgs/simple_profile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/include/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/include/menu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/js/npc_play_custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/_site/js/npc_play_custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/js/simple_main_custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/_site/js/simple_main_custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/npc_play.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/npc_play.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/simple_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/simple_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/font.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/font.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/dancing_mile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/npc2_down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/npc2_talk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/npc_down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/npc_talk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/profile_blank_img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/simple_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/simple_backplate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/simple_profile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/include/menu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/npc_play_custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/npc_play_custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/simple_main_custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/simple_main_custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/npc_play.html" beforeDir="false" afterPath="$PROJECT_DIR$/npc_play.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/simple_main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

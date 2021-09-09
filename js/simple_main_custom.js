@@ -87,6 +87,7 @@ $(document).ready(function() {
         var main_play = $("#main_play").val();
 
         var my_channel = $("#my_channel").val();
+        var my_job = $("#job").val();
 
         var bomb = $("#bomb").val();
         var bomb_solve = $("#bomb_solve").val();
@@ -120,13 +121,11 @@ $(document).ready(function() {
         ctx.fillText('누적레벨', 100, 490);
 
         ctx.fillText('길드', 350, 400);
-        ctx.fillText('결혼', 350, 430);
+        ctx.fillText('인겜결혼', 350, 430);
         ctx.fillText('패밀리', 350, 460);
         ctx.fillText('메인진행', 350, 490);
 
-        // ctx.fillText('지향색', 100, 540);
-
-        ctx.fillText('서버', 660, 95);
+        ctx.fillText('서버', 660, 95);    ctx.fillText('주 채널', 1000, 95);
         ctx.fillText('나이', 660, 125);
         ctx.fillText('플레이시간', 660, 155);
 
@@ -135,7 +134,7 @@ $(document).ready(function() {
 
         ctx.fillText('플레이타입', 660, 245);
 
-        ctx.fillText('주 채널', 660, 335);
+        ctx.fillText('주직업', 660, 335);
         ctx.fillText('스포일러', 660, 365);  ctx.fillText('여부', 740, 365);
                                             ctx.fillText('민감도', 740, 395);
 
@@ -144,22 +143,19 @@ $(document).ready(function() {
         ctx.fillText('하고싶은말', 660, 500);
 
         // content
-        ctx.font = "18px NexonLv2GothicBold";
+        ctx.font = "18px NexonLv2GothicLight";
         ctx.shadowBlur = 0;
 
         ctx.fillText(chara_name, 200, 400);
         ctx.fillText(nickname, 200, 430);
         ctx.fillText(race, 200, 460);
         ctx.fillText(level, 200, 490);
-
         ctx.fillText(guild, 450, 400);
-        // ctx.fillText(married, 450, 430); // --> 이건 select 로
         ctx.fillText(family, 450, 460);
         ctx.fillText(main_play, 450, 490);
-        ctx.fillText(my_channel + " 채널", 750, 335);
 
-        // 직접 적는건 Bold보단 기본이 나은 것 같아서
-        ctx.font = "18px NexonLv2GothicLight";
+        ctx.fillText(my_channel + " 채널", 1070, 95);
+        ctx.fillText(my_job, 750, 335);
         ctx.fillText(bomb, 750, 425);
         ctx.fillText(bomb_solve, 750, 455);
 
