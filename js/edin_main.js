@@ -191,7 +191,7 @@ $(document).ready(function() {
             preview_box.style.color = select_color;
         }
         if (color_max > 4) {color_max = 4};
-        if (color_max < 1) {color_max = 1};
+        if (color_max < 1) {color_max = 0};
         for (now_index = 0; now_index < color_max; now_index++) {
             x_ind = now_index; if (now_index > 1) {x_ind -= 2}
             y_ind = 0; if (now_index > 1) {y_ind = 1}
