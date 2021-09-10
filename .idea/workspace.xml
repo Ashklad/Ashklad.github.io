@@ -2,13 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd978d5d-6670-4d4b-b838-31f0f43d6436" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/_site/imgs/edin_profile/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_site/imgs/edin_profile/backplate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/edin_main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/edin_profile/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/edin_profile/backplate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/edin_main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/js/npc_play_custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/_site/js/npc_play_custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/js/simple_main_custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/_site/js/simple_main_custom.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/npc_play.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/npc_play.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/simple_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/simple_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/include/menu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/npc_play_custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/npc_play_custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/simple_main_custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/simple_main_custom.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/npc_play.html" beforeDir="false" afterPath="$PROJECT_DIR$/npc_play.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/simple_main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,12 +46,15 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="1xLnCYAY66O6eWWRXqapJIImB0J" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -77,5 +91,8 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

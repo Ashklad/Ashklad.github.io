@@ -134,7 +134,7 @@ $(document).ready(function() {
 
         ctx.fillText('플레이타입', 660, 245);
 
-        ctx.fillText('주직업', 660, 335);
+        ctx.fillText('주재능', 660, 335);
         ctx.fillText('스포일러', 660, 365);  ctx.fillText('여부', 740, 365);
                                             ctx.fillText('민감도', 740, 395);
 
