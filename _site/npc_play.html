@@ -33,6 +33,21 @@
         <label>키워드대화</label>
         <input type="radio" name="text_window_type" value="2">
     </p>
+    <p>
+        <strong>스탠딩 위치</strong>
+        <input type="range" id="standing_pos" min="0" max="1840" value="80" oninput="document.getElementById('standing_pos').innerHTML=this.value;">
+    </p>
+    <p>
+        <strong>말풍선 위치</strong>
+        <input type="range" id="textbox_pos" min="0" max="1840" value="610" oninput="document.getElementById('textbox_pos').innerHTML=this.value;">
+    </p>
+    <p>
+        <strong>사이트 URL 표기</strong>
+        <label>함</label>
+        <input type="radio" name="site_url" value="on" checked>
+        <label>안함</label>
+        <input type="radio" name="site_url" value="off">
+    </p>
 
     <br>
 
@@ -50,7 +65,7 @@
         </label>
         <input type="file" id="standing_img" accept="image/*">
     </p>
-    <p class="explain">스탠딩 이미지는 514 * 948 사이즈 정도면 괜찮습니다.</p>
+    <p class="explain">스탠딩 이미지는 (자유) * 932 사이즈를 기본으로 알아서 높이에 맞춰 조절됩니다.</p>
 
     <br>
 
@@ -78,7 +93,6 @@
     <div class="use_info">
         <p>이 페이지는 송백령님(https://son02.postype.com/post/2582620)이 배포해주신 틀을 사용하였습니다.</p>
         <p>이 페이지에서 생성한 이미지는 상업적이지 않은 선에서 오로지 노는 용도로 자유롭게 사용하실 수 있습니다.</p>
-        <p>이미지에 사용된 게임 로고 이미지의 저작권은 (주)넥슨코리아에 있습니다.</p>
     </div>
 </section>
 

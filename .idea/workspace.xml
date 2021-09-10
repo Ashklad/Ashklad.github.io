@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cd978d5d-6670-4d4b-b838-31f0f43d6436" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/js/npc_play_custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/_site/js/npc_play_custom.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/npc_play.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/npc_play.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/npc_play_custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/npc_play_custom.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/npc_play.html" beforeDir="false" afterPath="$PROJECT_DIR$/npc_play.html" afterDir="false" />
     </list>
