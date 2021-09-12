@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'NotoSansCJKtcBold';
+    src: url('../fonts/NotoSansCJKtc-Bold.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'NotoSansCJKtcRegular';
+    src: url('../fonts/NotoSansCJKtc-Regular.woff2') format('woff2');
+}
+

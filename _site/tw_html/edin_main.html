@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mabimg::個客製化瑪奇圖版的網站</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../imgs/logo/dancing_mile.png">
+    <link href="../css/main_tw.css" rel="stylesheet" type="text/css">
+    <link href="../css/font_tw.css" rel="stylesheet" type="text/css">
+    <script src="../libs/jquery-3.6.0.min.js"></script>
+    <script src="../js/edin_main_tw.js"></script>
+    <script src="../js/element_join_tw.js"></script>
+</head>
+<body>
+
+<div id="menu"></div>
+
+<section class="input_sheet">
+    <img src="../imgs/edin_profile/background.png" id="background" class="hidden">
+    <img src="../imgs/edin_profile/backplate_tw.png" id="backplate" class="hidden">
+
+    <h1>Edin版瑪奇交友券表格</h1>
+    <p class="explain">由Edin(@dshi__)製作的瑪奇交友圖產生器</p>
+    <p class="explain">請在空格處輸入必要的資訊</p>
+
+    <h3>介面設定</h3>
+    <p>
+        <strong>視窗位置</strong>
+        <label>x軸</label>
+        <input type="range" id="popup_x" min="0" max="1350" value="35" oninput="document.getElementById('popup_x').innerHTML=this.value;">
+        <label>y軸</label>
+        <input type="range" id="popup_y" min="0" max="1080" value="35" oninput="document.getElementById('popup_y').innerHTML=this.value;">
+    </p>
+    <p>
+        <label>重點使用色</label>
+        <input type="color" id="highlight" value="#56bbc3">
+    </p>
+
+    <h3>圖片資訊</h3>
+    <p>
+        <label>
+            背景圖片 :
+        </label>
+        <input type="file" id="background_img" accept="image/*">
+    </p>
+    <p class="explain">默認情況下會將圖片自動裁剪至適合1350*1080的大小</p>
+
+    <h3>文字訊息</h3>
+    <p>
+        <strong>追蹤</strong>
+        <label>
+            提及
+        </label>
+        <input type="checkbox" id="follow_0">
+        <label>
+            轉推
+        </label>
+        <input type="checkbox" id="follow_1">
+        <label>
+            喜歡
+        </label>
+        <input type="checkbox" id="follow_2">
+        <label>
+            追蹤我
+        </label>
+        <input type="checkbox" id="follow_3">
+    </p>
+    <p>
+        <label>
+            伺服器 :
+        </label>
+        <select name="server" id="server">
+            <option value selected>選擇伺服器</option>
+            <option value="娜歐">娜歐</option>
+            <option value="貝婷">貝婷</option>
+            <option value="愛麗莎">愛麗莎</option>
+        </select>
+    </p>
+    <p>
+        <label>
+            常用才能 :
+        </label>
+        <input type="text" id="talent">
+    </p>
+    <p>
+        <label>
+            角色名稱 :
+        </label>
+        <input type="text" id="chara_name">
+    </p>
+    <p>
+        <label>
+            公會 :
+        </label>
+        <input type="text" id="guild">
+    </p>
+    <p>
+        <label>
+            種族 :
+        </label>
+        <select name="race" id="race">
+            <option value selected>選擇種族</option>
+            <option value="人類">人類</option>
+            <option value="精靈">精靈</option>
+            <option value="巨人">巨人</option>
+        </select>
+    </p>
+    <p>
+        <label>
+            累積等級 :
+        </label>
+        <input type="text" id="level">
+    </p>
+
+    <hr>
+
+    <p>
+        <label>
+            年齡 :
+        </label>
+        <select name="age" id="age">
+            <option value selected>選擇年齡</option>
+            <option value="未成年">未成年</option>
+            <option value="成年">成年</option>
+            <option value="秘密">秘密</option>
+        </select>
+    </p>
+    <p>
+        <strong>遊玩時間</strong>
+        <label>規律</label>
+        <input type="radio" name="playtime_regular" value="規律">
+        <label>不規律</label>
+        <input type="radio" name="playtime_regular" value="不規律">
+    </p>
+    <p>
+        <strong>平日</strong>
+        <label>
+            清晨
+        </label>
+        <input type="checkbox" id="weekday_0">
+        <label>
+            早上
+        </label>
+        <input type="checkbox" id="weekday_1">
+        <label>
+            中午
+        </label>
+        <input type="checkbox" id="weekday_2">
+        <label>
+            下午
+        </label>
+        <input type="checkbox" id="weekday_3">
+        <label>
+            晚上
+        </label>
+        <input type="checkbox" id="weekday_4">
+    </p>
+    <p>
+        <strong>假日</strong>
+        <label>
+            清晨
+        </label>
+        <input type="checkbox" id="weekend_0">
+        <label>
+            早上
+        </label>
+        <input type="checkbox" id="weekend_1">
+        <label>
+            中午
+        </label>
+        <input type="checkbox" id="weekend_2">
+        <label>
+            下午
+        </label>
+        <input type="checkbox" id="weekend_3">
+        <label>
+            晚上
+        </label>
+        <input type="checkbox" id="weekend_4">
+    </p>
+    <p>
+        <strong>節慶</strong>
+        <label>
+            清晨
+        </label>
+        <input type="checkbox" id="holiday_0">
+        <label>
+            早上
+        </label>
+        <input type="checkbox" id="holiday_1">
+        <label>
+            中午
+        </label>
+        <input type="checkbox" id="holiday_2">
+        <label>
+            下午
+        </label>
+        <input type="checkbox" id="holiday_3">
+        <label>
+            晚上
+        </label>
+        <input type="checkbox" id="holiday_4">
+    </p>
+    <h4>遊玩種類</h4>
+    <p>
+        <label>퀘스트</label>
+        <input type="checkbox" id="playType1_0">
+        <label>사냥</label>
+        <input type="checkbox" id="playType1_1">
+        <label>수련</label>
+        <input type="checkbox" id="playType1_2">
+        <label>수집</label>
+        <input type="checkbox" id="playType1_3">
+        <label>잠수</label>
+        <input type="checkbox" id="playType1_4">
+        <label>탐험</label>
+        <input type="checkbox" id="playType1_5">
+        <label>미니게임</label>
+        <input type="checkbox" id="playType1_6">
+        <label>스샷</label>
+        <input type="checkbox" id="playType1_7">
+        <label>수다</label>
+        <input type="checkbox" id="playType1_8">
+    </p>
+    <p>
+        <label>의장</label>
+        <input type="checkbox" id="playType2_0">
+        <label>기타</label>
+        <input type="checkbox" id="playType2_1">
+    </p>
+    <p>
+        <strong>주 채널</strong>
+        <label>고정</label>
+        <input type="radio" name="channel_fix" value="고정">
+        <label>랜덤</label>
+        <input type="radio" name="channel_fix" value="랜덤">
+        <label>주로 접속하는 채널</label>
+        <input type="number" id="channel_num" min="1" max="99">
+    </p>
+    <p class="explain">랜덤으로 설정할 시 주로 접속하는 채널이 병기되지 않습니다.</p>
+
+    <hr>
+
+    <p>
+        <strong>你有慣用色嗎?</strong>
+        <label>有</label>
+        <input type="radio" name="own_color_exists" value="有">
+        <label>沒有</label>
+        <input type="radio" name="own_color_exists" value="沒有">
+    </p>
+    <p>
+        <label style="padding-right: 20px;">主色1</label>
+        <span>
+        <strong> R </strong><input type="number" min="0" max="255" value="255" id="color1_r">
+        <strong> G </strong><input type="number" min="0" max="255" value="255" id="color1_g">
+        <strong> B </strong><input type="number" min="0" max="255" value="255" id="color1_b">
+        </span>
+        <span id="color1_preview" style="color:white;">■</span>
+        <label>主顏色名稱: </label>
+        <input type="text" id="color1_name">
+    </p>
+    <p>
+        <label style="padding-right: 20px;">主色2</label>
+        <span>
+        <strong> R </strong><input type="number" min="0" max="255" value="255" id="color2_r">
+        <strong> G </strong><input type="number" min="0" max="255" value="255" id="color2_g">
+        <strong> B </strong><input type="number" min="0" max="255" value="255" id="color2_b">
+        </span>
+        <span id="color2_preview" style="color:white;">■</span>
+        <label>主顏色名稱: </label>
+        <input type="text" id="color2_name">
+    </p>
+    <p>
+        <label style="padding-right: 20px;">主色3</label>
+        <span>
+        <strong> R </strong><input type="number" min="0" max="255" value="255" id="color3_r">
+        <strong> G </strong><input type="number" min="0" max="255" value="255" id="color3_g">
+        <strong> B </strong><input type="number" min="0" max="255" value="255" id="color3_b">
+        </span>
+        <span id="color3_preview" style="color:white;">■</span>
+        <label>主顏色名稱: </label>
+        <input type="text" id="color3_name">
+    </p>
+    <p>
+        <label style="padding-right: 20px;">主色4</label>
+        <span>
+        <strong> R </strong><input type="number" min="0" max="255" value="255" id="color4_r">
+        <strong> G </strong><input type="number" min="0" max="255" value="255" id="color4_g">
+        <strong> B </strong><input type="number" min="0" max="255" value="255" id="color4_b">
+        </span>
+        <span id="color4_preview" style="color:white;">■</span>
+        <label>主顏色名稱: </label>
+        <input type="text" id="color4_name">
+    </p>
+    <p>
+        <label>你使用的副配色</label>
+        <label class="explain">根據你所設置的數量所顯示, 最多四個</label>
+        <input type="number" id="color_max" min=0 max=4 value=1>
+    </p>
+
+    <p>
+        <label>
+            我最喜歡的角色 :
+        </label>
+        <input type="text" id="lover">
+    </p>
+    <h4>偏好</h4>
+    <p>
+        <label>異性</label>
+        <input type="checkbox" id="personality1_0">
+        <label>女性向</label>
+        <input type="checkbox" id="personality1_1">
+        <label>男性向</label>
+        <input type="checkbox" id="personality1_2">
+        <label>夢女</label>
+        <input type="checkbox" id="personality1_3">
+        <label>可逆推</label>
+        <input type="checkbox" id="personality1_4">
+        <label>不可逆推</label>
+        <input type="checkbox" id="personality1_5">
+        <label>沒有喜歡的cp</label>
+        <input type="checkbox" id="personality1_6">
+    </p>
+    <p>
+        <label>都吃</label>
+        <input type="checkbox" id="personality2_0">
+        <label>其他</label>
+        <input type="checkbox" id="personality2_1">
+    </p>
+
+    <h4>使用推特的偏好</h4>
+    <p>
+        <label>轉推</label>
+        <input type="checkbox" id="tw_personality1_0">
+        <label>愛心仙子</label>
+        <input type="checkbox" id="tw_personality1_1">
+        <label>瑪奇外的事情</label>
+        <input type="checkbox" id="tw_personality1_2">
+        <label>在主頁與其他追蹤者發推聊天</label>
+        <input type="checkbox" id="tw_personality1_3">
+    </p>
+    <p>
+        <label>日常推</label>
+        <input type="checkbox" id="tw_personality2_0">
+        <label>髒話推</label>
+        <input type="checkbox" id="tw_personality2_1">
+        <label>推特中毒患者</label>
+        <input type="checkbox" id="tw_personality2_2">
+        <label>R18推</label>
+        <input type="checkbox" id="tw_personality2_3">
+        <label>憂鬱推</label>
+        <input type="checkbox" id="tw_personality2_4">
+    </p>
+    <p>
+        <label>塗鴉推</label>
+        <input type="checkbox" id="tw_personality3_0">
+        <label>故事推</label>
+        <input type="checkbox" id="tw_personality3_1">
+        <label>cosplay</label>
+        <input type="checkbox" id="tw_personality3_2">
+        <label>녹음</label>
+        <input type="checkbox" id="tw_personality3_3">
+        <label>제작</label>
+        <input type="checkbox" id="tw_personality3_4">
+        <label>潛水者</label>
+        <input type="checkbox" id="tw_personality3_5">
+        <label>其他</label>
+        <input type="checkbox" id="tw_personality3_6">
+    </p>
+
+    <p>
+        <strong>地雷</strong>
+        <label>可以無視</label>
+        <input type="radio" name="bomb" value="무시가능">
+        <label>無法無視</label>
+        <input type="radio" name="bomb" value="무시불가능">
+        <label>可以無視, 只要不提及我</label>
+        <input type="radio" name="bomb" value="직멘제외무시가능">
+    </p>
+    <p><label>想說的話</label></p>
+    <p class="explain">最多五行</p>
+    <p><textarea id="etc_talk" style="width:100%; height:150px; word-wrap:break-all;"></textarea></p>
+
+
+    <h2>圖片輸出</h2>
+    <p>
+        <button id="apply">套用變更</button>
+        <button id="download">下載</button>
+    </p>
+    <div id="canvas_frame">
+        <canvas id="canvas" width="1350" height="1080" style="position: relative;"></canvas>
+    </div>
+
+    <br>
+
+    <div class="use_info">
+        <p>這個頁面所使用的板模是由Edin(@dshi__)製作</p>
+        <p>這個頁面所創造的圖片只限用於非營利目的</p>
+        <p>圖片所使用的遊戲logo著作權由Nexon Korea Co., Ltd.所有</p>
+    </div>
+</section>
+
+<div id="footer"></div>
+
+</body>
+</html>

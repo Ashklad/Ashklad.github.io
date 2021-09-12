@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Mabimg::個客製化瑪奇圖版的網站</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../imgs/logo/dancing_mile.png">
+    <link href="../css/main_tw.css" rel="stylesheet" type="text/css">
+    <link href="../css/font_tw.css" rel="stylesheet" type="text/css">
+    <script src="../libs/jquery-3.6.0.min.js"></script>
+    <script src="../js/simple_main_custom_tw.js"></script>
+    <script src="../js/element_join_tw.js"></script>
+</head>
+<body>
+
+<div id="menu"></div>
+
+<section class="input_sheet">
+    <img src="../imgs/simple_profile/simple_profile.png" id="simple_profile" class="hidden">
+    <img src="../imgs/simple_profile/simple_background.png" id="simple_background" class="hidden">
+    <img src="../imgs/simple_profile/simple_backplate_tw.png" id="simple_backplate" class="hidden">
+    <h1>簡易版的米列希安自我介紹!</h1>
+    <p class="explain">一個簡易的米列希安自介圖像產生器</p>
+    <p class="explain">請在空格處輸入必要的資訊</p>
+
+    <h3>介面設定</h3>
+    <p>
+        <label>重點使用色</label>
+        <input type="color" id="highlight" value="#56bbc3">
+    </p>
+
+    <h3>遊戲資訊</h3>
+    <p>
+        <label>
+            個人資料圖片 :
+        </label>
+        <input type="file" id="profile_img" accept="image/*">
+    </p>
+    <p class="explain">默認情況下會將圖片自動裁剪至適合516*266的大小</p>
+    <p>
+        <label>背景圖片 : </label>
+        <input type="file" id="background_img" accept="image/*">
+    </p>
+    <p class="explain">背景圖片是顯示在介面窗口之外圍的圖象</p>
+    <p>
+        <label>
+            伺服器 :
+        </label>
+        <select name="server" id="server">
+            <option value selected>請選擇伺服器</option>
+            <option value="娜歐">娜歐</option>
+            <option value="貝婷">貝婷</option>
+            <option value="愛麗莎">愛麗莎</option>
+        </select>
+    </p>
+    <p>
+        <label>
+            最常駐分流
+        </label>
+        <input type="number" id="my_channel" min="1" max="99">
+    </p>
+    <p>
+        <label>
+            角色名稱 :
+        </label>
+        <input type="text" name="chara_name" id="chara_name">
+    </p>
+    <p>
+        <label>
+            暱稱 :
+        </label>
+        <input type="text" name="nickname" id="nickname">
+    </p>
+    <p>
+        <label>
+            種族 :
+        </label>
+        <select name="race" id="race">
+            <option value selected>請選擇種族</option>
+            <option value="人類">人類</option>
+            <option value="精靈">精靈</option>
+            <option value="巨人">巨人</option>
+        </select>
+    </p>
+    <p>
+        <label>
+            公會 :
+        </label>
+        <input type="text" name="guild" id="guild">
+    </p>
+    <p>
+        <label>
+            最常使用的才能 :
+        </label>
+        <input type="text" id="job">
+    </p>
+    <p>
+        <strong>婚姻狀態</strong>
+        <label>單身</label>
+        <input type="radio" name="married" value="單身">
+        <label>已婚</label>
+        <input type="radio" name="married" value="已婚">
+        <p class="explain">這不代表現實, 是單純在遊戲內的婚姻狀態</p>
+    </p>
+    <p>
+        <label>家族</label>
+        <input type="text" id="family">
+    </p>
+    <p>
+        <label>
+            累積等級 :
+        </label>
+        <input type="text" id="level">
+    </p>
+    <p>
+        <label>
+            主線進展 :
+        </label>
+        <input type="text" id="main_play">
+    </p>
+
+    <h3>玩家資訊</h3>
+    <p>
+        <label>
+            年齡 :
+        </label>
+        <select name="age" id="age">
+            <option value selected>請選擇年齡</option>
+            <option value="未成年">未成年</option>
+            <option value="成年">成年</option>
+            <option value="秘密(不公開)">秘密(不公開)</option>
+        </select>
+    </p>
+    <h4>遊玩時間</h4>
+    <p>
+        <strong>平日</strong>
+        <label>
+            清晨
+        </label>
+        <input type="checkbox" id="weekday_0">
+        <label>
+            早上
+        </label>
+        <input type="checkbox" id="weekday_1">
+        <label>
+            中午
+        </label>
+        <input type="checkbox" id="weekday_2">
+        <label>
+            下午
+        </label>
+        <input type="checkbox" id="weekday_3">
+        <label>
+            晚上
+        </label>
+        <input type="checkbox" id="weekday_4">
+    </p>
+    <p>
+        <strong>假日</strong>
+        <label>
+            清晨
+        </label>
+        <input type="checkbox" id="weekend_0">
+        <label>
+            早上
+        </label>
+        <input type="checkbox" id="weekend_1">
+        <label>
+            中午
+        </label>
+        <input type="checkbox" id="weekend_2">
+        <label>
+            下午
+        </label>
+        <input type="checkbox" id="weekend_3">
+        <label>
+            晚上
+        </label>
+        <input type="checkbox" id="weekend_4">
+    </p>
+    <h4>遊玩種類</h4>
+    <p>
+        <label>
+            掛網
+        </label>
+        <input type="checkbox" id="playType1_0">
+        <label>
+            戰鬥
+        </label>
+        <input type="checkbox" id="playType1_1">
+        <label>
+            演奏
+        </label>
+        <input type="checkbox" id="playType1_2">
+        <label>
+            生產
+        </label>
+        <input type="checkbox" id="playType1_3">
+        <label>
+            時裝
+        </label>
+        <input type="checkbox" id="playType1_4">
+        <label>
+            補師
+        </label>
+        <input type="checkbox" id="playType1_5">
+        <label>
+            蒐集日誌
+        </label>
+        <input type="checkbox" id="playType1_6">
+    </p>
+    <p>
+        <label>
+            成就日誌
+        </label>
+        <input type="checkbox" id="playType2_0">
+        <label>
+            探險
+        </label>
+        <input type="checkbox" id="playType2_1">
+        <label>
+            浪漫農場
+        </label>
+        <input type="checkbox" id="playType2_2">
+        <label>
+            使徒任務
+        </label>
+        <input type="checkbox" id="playType2_3">
+    </p>
+    <p>
+        <label style="padding-right: 20px;">主色1</label>
+        <span>
+        <strong> R </strong><input type="number" min="0" max="255" value="255" id="color1_r">
+        <strong> G </strong><input type="number" min="0" max="255" value="255" id="color1_g">
+        <strong> B </strong><input type="number" min="0" max="255" value="255" id="color1_b">
+        </span>
+        <span id="color1_preview" style="color:white;">■</span>
+    </p>
+    <p>
+        <label style="padding-right: 20px;">主色2</label>
+        <span>
+        <strong> R </strong><input type="number" min="0" max="255" value="255" id="color2_r">
+        <strong> G </strong><input type="number" min="0" max="255" value="255" id="color2_g">
+        <strong> B </strong><input type="number" min="0" max="255" value="255" id="color2_b">
+        </span>
+        <span id="color2_preview" style="color:white;">■</span>
+    </p>
+    <p>
+        <label style="padding-right: 20px;">主色3</label>
+        <span>
+        <strong> R </strong><input type="number" min="0" max="255" value="255" id="color3_r">
+        <strong> G </strong><input type="number" min="0" max="255" value="255" id="color3_g">
+        <strong> B </strong><input type="number" min="0" max="255" value="255" id="color3_b">
+        </span>
+        <span id="color3_preview" style="color:white;">■</span>
+    </p>
+    <p>
+        <label style="padding-right: 20px;">主色4</label>
+        <span>
+        <strong> R </strong><input type="number" min="0" max="255" value="255" id="color4_r">
+        <strong> G </strong><input type="number" min="0" max="255" value="255" id="color4_g">
+        <strong> B </strong><input type="number" min="0" max="255" value="255" id="color4_b">
+        </span>
+        <span id="color4_preview" style="color:white;">■</span>
+    </p>
+    <p>
+        <label style="padding-right: 20px;">主色5</label>
+        <span>
+        <strong> R </strong><input type="number" min="0" max="255" value="255" id="color5_r">
+        <strong> G </strong><input type="number" min="0" max="255" value="255" id="color5_g">
+        <strong> B </strong><input type="number" min="0" max="255" value="255" id="color5_b">
+        </span>
+        <span id="color5_preview" style="color:white;">■</span>
+    </p>
+    <p>
+        <label>外框顏色</label>
+        <input type="color" id="stroke_color" value="#000000">
+    </p>
+    <p>
+        <label>副配色</label>
+        <label class="explain">根據你所設置的數量所顯示, 最多五個</label>
+        <input type="number" id="color_max" min=1 max=5 value=1>
+    </p>
+    <p>
+        <strong>暴雷程度</strong>
+        <label>可能會暴雷</label>
+        <input type="radio" name="spoiler_do" value="可能會暴雷">
+        <label>不會暴雷</label>
+        <input type="radio" name="spoiler_do" value="不會暴雷">
+    </p>
+    <p>
+        <strong>對暴雷的敏感度</strong>
+        <label>超敏感</label>
+        <input type="radio" name="spoiler_in" value="超敏感">
+        <label>都可以</label>
+        <input type="radio" name="spoiler_in" value="都可以">
+    </p>
+    <p>
+        <label>我的地雷</label>
+        <input type="text" id="bomb">
+    </p>
+    <p>
+        <label>遇到地雷時我會</label>
+        <input type="text" id="bomb_solve">
+        <span class="explain">封鎖, 靜音...等等</span>
+    </p>
+    <p><label>我想說的話</label></p>
+    <p><textarea id="etc_talk" style="width:100%; height:200px; word-wrap:break-all;"></textarea></p>
+    <h2>圖片輸出</h2>
+    <p>
+        <button id="apply">套用變更</button>
+        <button id="download">下載</button>
+    </p>
+    <div id="canvas_frame">
+        <canvas id="canvas" width="1200" height="675" style="position: relative;"></canvas>
+    </div>
+    <br>
+    <div class="use_info">
+        <p>這個頁面所創造的圖片只限用於非營利目的</p>
+        <p>圖片所使用的遊戲logo著作權由Nexon Korea Co., Ltd.所有</p>
+    </div>
+
+</section>
+
+<div id="footer"></div>
+
+</body>
+</html>
