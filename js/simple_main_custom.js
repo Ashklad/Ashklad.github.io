@@ -76,6 +76,7 @@ $(document).ready(function() {
         var profile_img = document.getElementById("simple_profile")
 
         // 변수들
+        var select_font = $("#select_font").val();
         var channel_name = $("#server").val();
         var chara_name = $("#chara_name").val();
         var nickname = $("#nickname").val();
@@ -95,6 +96,7 @@ $(document).ready(function() {
 
         var stroke_color = $("#stroke_color").val();
         var color_max = $("#color_max").val();
+        var color_check = document.getElementById('color_view');
 
         // radio image
         var married = document.getElementsByName("married");
@@ -111,6 +113,7 @@ $(document).ready(function() {
 
         // categories
         ctx.font = '18px NexonLv2GothicBold';
+        ctx.font = "20px "+select_font;
         ctx.fillStyle = "rgb(255, 255, 255)";
         ctx.shadowColor = "black";
         ctx.shadowBlur = 10;
@@ -144,6 +147,7 @@ $(document).ready(function() {
 
         // content
         ctx.font = "18px NexonLv2GothicLight";
+        ctx.font = "18px "+select_font;
         ctx.shadowBlur = 0;
 
         ctx.fillText(chara_name, 200, 400);
@@ -165,6 +169,7 @@ $(document).ready(function() {
             ctx.fillText(etc_talks[etc_index], 675, 550 + 20 * etc_index)
         }
         ctx.font = "18px NexonLv2GothicBold";
+        ctx.font = "18px "+select_font;
 
         // select content
         var channel_label = ["류트", "울프", "하프", "만돌린"]
@@ -214,6 +219,7 @@ $(document).ready(function() {
 
         // colors
         ctx.font = "10px NexonLv2GothicBold";
+        ctx.font = "10px "+select_font;
         if (color_max > 5) {color_max = 5};
         if (color_max < 1) {color_max = 1};
         color_start_point = 270 - (color_max * 40)
@@ -228,16 +234,20 @@ $(document).ready(function() {
         ctx.fillStyle = "rgb(255, 255, 255)";
         ctx.lineWidth = 3;
         for (now_index = 0; now_index < color_max; now_index++) {
+            target_id='#color_view'
             color_obj = color_list[now_index]
             select_color = "(" + color_obj.r + "," + color_obj.g + "," + color_obj.b + ")"
             ctx.strokeRect(color_start_point + 105 * now_index, 530, 85, 85);
             if (select_color == "(255,255,255)") { ctx.fillStyle = "#000000"; }
-            ctx.fillText(select_color, 7 + color_start_point + 105 * now_index, 605);
+            if($(target_id).is(":checked")){
+                ctx.fillText(select_color, 7 + color_start_point + 105 * now_index, 605);
+            }            
             ctx.fillStyle = "#ffffff";
         }
 
         // 폰트 초기화
         ctx.font = '18px NexonLv2GothicBold';
+        ctx.font = "18px "+select_font;
         ctx.fillStyle = "rgb(255, 255, 255)";
         ctx.strokeStyle = "black";
         ctx.lineWidth = 1;
