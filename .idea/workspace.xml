@@ -1,46 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cd978d5d-6670-4d4b-b838-31f0f43d6436" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/_site/css/font_tw.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/css/main_tw.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/fonts/NotoSansCJKtc-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/fonts/NotoSansCJKtc-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/imgs/edin_profile/backplate_tw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/imgs/simple_profile/simple_backplate_tw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/include/etc_license.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/include/footer_tw.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/include/menu_tw.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/js/edin_main_tw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/js/element_join_tw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/js/simple_main_custom_tw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/tw_html/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/tw_html/edin_main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/tw_html/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/tw_html/npc_play.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_site/tw_html/simple_main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/font_tw.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/main_tw.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/NotoSansCJKtc-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/NotoSansCJKtc-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgs/edin_profile/backplate_tw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgs/simple_profile/simple_backplate_tw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/etc_license.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/footer_tw.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/menu_tw.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/edin_main_tw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/element_join_tw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/simple_main_custom_tw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tw_html/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tw_html/edin_main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tw_html/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tw_html/npc_play.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tw_html/simple_main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/imgs/edin_profile/backplate.png" beforeDir="false" afterPath="$PROJECT_DIR$/_site/imgs/edin_profile/backplate.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-    </list>
+    <list default="true" id="cd978d5d-6670-4d4b-b838-31f0f43d6436" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
