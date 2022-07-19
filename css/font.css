@@ -14,3 +14,7 @@
     font-family: 'NanumGothic';
     src: url('../fonts/NanumGothic.ttf') format('ttf');
 }
+@font-face {
+    font-family: 'Mabinogi_Classic_TTF';
+    src: url('../fonts/Mabinogi_Classic_TTF.ttf') format('ttf');
+}
