@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Mabimg::마비노기 커스텀 이미지 제작 사이트</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./imgs/logo/dancing_mile.png">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/font.css" rel="stylesheet" type="text/css">
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script src="js/creamcat.js"></script>
+    <script src="js/element_join.js"></script>
+</head>
+<body>
+
+    <div id="menu"></div>
+
+<section class="input_sheet">
+    <img src="imgs/cream/main_2.png" id="basic_sheet" class="hidden">
+    <img src="imgs/cream/profile_basic.png" id="basic_profile" class="hidden">
+
+    <img src="imgs/cream/main_2.png" id="main_2_sheet" class="hidden">
+    <img src="imgs/cream/main_3.png" id="main_3_sheet" class="hidden">
+    <img src="imgs/cream/tchin_2.png" id="tchin_2_sheet" class="hidden">
+    <img src="imgs/cream/tchin_3.png" id="tchin_3_sheet" class="hidden">
+
+    <img src="imgs/cream/lover_basic.png" id="lover_img_obj_1" class="hidden">
+    <img src="imgs/cream/lover_basic.png" id="lover_img_obj_2" class="hidden">
+    <img src="imgs/cream/lover_basic.png" id="lover_img_obj_3" class="hidden">
+
+    <h1>크림야옹 마비노기 자기소개/트친소표!</h1>
+    <p class="explain">크림야옹(@Cream__game)님께서 배포해주신 메인트윗/트친소용 이미지를 자동 생성합니다.</p>
+    <p class="explain">아래 칸에 필요한 정보를 입력해주세요.</p>
+
+    <h3>시트 설정</h3>
+    <p>
+        <label>글씨색</label>
+        <input type="color" id="font_color" value="#3e3e3e">
+    </p>
+    <p>
+        <label>하이라이트색</label>
+        <input type="color" id="highlight" value="#56bbc3">
+    </p>
+    <p>
+        <strong>시트 종류</strong>
+        <label>메인트용</label>
+        <input type="radio" name="sheet_type" value="메인트" checked>
+        <label>트친소용</label>
+        <input type="radio" name="sheet_type" value="트친소">
+    </p>
+
+    <h3>이미지 정보</h3>
+    <p>
+        <label>
+            프로필 이미지 :
+        </label>
+        <input type="file" id="profile_img" accept="image/*">
+    </p>
+    <p class="explain">프로필 이미지는 동그란 원에 들어가는 이미지입니다. ( 195 x 195 px )</p>
+
+    <h3>작성자 정보</h3>
+    <p>
+        <label>
+            트위터 닉네임 :
+        </label>
+        <input type="text" name="twitter_nickname" id="twitter_nickname">
+    </p>
+    <p>
+        <label>
+            트위터 ID :
+        </label>
+        <input type="text" name="twitter_id" id="twitter_id">
+    </p>
+    <p>
+        <label>
+            나이 :
+        </label>
+        <select name="age" id="age">
+            <option value selected>나이를 선택하세요</option>
+            <option value="미성년자">미성년자</option>
+            <option value="성인">성인</option>
+            <option value="비밀">비밀</option>
+        </select>
+    </p>
+    <p id="select_main_p">
+        <strong>팔로우   </strong>
+        <label>
+            구독의 의미 :
+        </label>
+        <input type="checkbox" id="main_follow_0">
+        <label>
+            멘션주시면 맞팔 :
+        </label>
+        <input type="checkbox" id="main_follow_1">
+        <label>
+            기타 :
+        </label>
+        <input type="checkbox" id="main_follow_2">
+        <input type="text" name="main_follow_etc" id="main_follow_etc" value="">
+    </p>
+    <p id="select_tchin_p">
+        <strong>트친소   </strong>
+        <label>
+            RT :
+        </label>
+        <input type="checkbox" id="tchin_follow_0">
+        <label>
+            마음 :
+        </label>
+        <input type="checkbox" id="tchin_follow_1">
+        <label>
+            팔로우 :
+        </label>
+        <input type="checkbox" id="tchin_follow_2">
+        <label>
+            멘션 :
+        </label>
+        <input type="checkbox" id="tchin_follow_3">
+    </p>
+
+    <h3>마비노기 정보</h3>
+    <p>
+        <label>
+            인게임 닉네임 :
+        </label>
+        <input type="text" name="ingame_nickname" id="ingame_nickname">
+    </p>
+    <p>
+        <label>
+            서버 :
+        </label>
+        <select name="server" id="server">
+            <option value selected>서버를 선택하세요</option>
+            <option value="류트">류트</option>
+            <option value="울프">울프</option>
+            <option value="하프">하프</option>
+            <option value="만돌린">만돌린</option>
+        </select>
+    </p>
+    <p>
+        <label>
+            주 채널
+        </label>
+        <input type="number" id="my_channel" min="1" max="99">
+    </p>
+    <p>
+        <label>
+            누적레벨 :
+        </label>
+        <input type="text" id="level">
+    </p>
+    <p>
+        <label>
+            길드 :
+        </label>
+        <input type="text" name="guild" id="guild">
+    </p>
+    <h4>플레이타입</h4>
+    <p>
+        <label>
+            석상
+        </label>
+        <input type="checkbox" id="playType1_0">
+        <label>
+            사냥
+        </label>
+        <input type="checkbox" id="playType1_1">
+        <label>
+            합주
+        </label>
+        <input type="checkbox" id="playType1_2">
+        <label>
+            의장
+        </label>
+        <input type="checkbox" id="playType1_3">
+        <label>
+            마감
+        </label>
+        <input type="checkbox" id="playType1_4">
+        <label>
+            수련
+        </label>
+        <input type="checkbox" id="playType1_5">
+        <label>
+            수집
+        </label>
+        <input type="checkbox" id="playType1_6">
+        <label>
+            미니게임
+        </label>
+        <input type="checkbox" id="playType1_7">
+    </p>
+    <p>
+        <label>
+            탐험
+        </label>
+        <input type="checkbox" id="playType2_0">
+        <label>
+            저널
+        </label>
+        <input type="checkbox" id="playType2_1">
+        <label>
+            제작
+        </label>
+        <input type="checkbox" id="playType2_2">
+        <label>
+            판매
+        </label>
+        <input type="checkbox" id="playType2_3">
+    </p>
+
+    <h4>지향색</h4>
+    <p>
+        <label style="padding-right: 20px;">지향색1</label>
+        <span>
+        <strong> R </strong><input type="number" min="0" max="255" value="255" id="color1_r">
+        <strong> G </strong><input type="number" min="0" max="255" value="255" id="color1_g">
+        <strong> B </strong><input type="number" min="0" max="255" value="255" id="color1_b">
+        </span>
+        <span id="color1_preview" style="color:white;">■</span>
+        <label>지향색명: </label>
+        <input type="text" id="color1_name">
+    </p>
+    <p>
+        <label style="padding-right: 20px;">지향색2</label>
+        <span>
+        <strong> R </strong><input type="number" min="0" max="255" value="255" id="color2_r">
+        <strong> G </strong><input type="number" min="0" max="255" value="255" id="color2_g">
+        <strong> B </strong><input type="number" min="0" max="255" value="255" id="color2_b">
+        </span>
+        <span id="color2_preview" style="color:white;">■</span>
+        <label>지향색명: </label>
+        <input type="text" id="color2_name">
+    </p>
+    <p>
+        <label style="padding-right: 20px;">지향색3</label>
+        <span>
+        <strong> R </strong><input type="number" min="0" max="255" value="255" id="color3_r">
+        <strong> G </strong><input type="number" min="0" max="255" value="255" id="color3_g">
+        <strong> B </strong><input type="number" min="0" max="255" value="255" id="color3_b">
+        </span>
+        <span id="color3_preview" style="color:white;">■</span>
+        <label>지향색명: </label>
+        <input type="text" id="color3_name">
+    </p>
+
+    <h4>프플팩 사용</h4>
+    <p>
+        <label>간단하게 표시</label>
+        <input type="radio" name="ppp_detail" value="simple" checked>
+        <label>디테일하게 표시</label>
+        <input type="radio" name="ppp_detail" value="detail">
+    </p>
+    <p id="ppp_show_simple">
+        <label>
+            사용
+        </label>
+        <input type="checkbox" id="pppTypeSimple_0">
+        <label>
+            미사용
+        </label>
+        <input type="checkbox" id="pppTypeSimple_1">
+    </p>
+    <p id="ppp_show_detail">
+        <label>
+            콤비네이션
+        </label>
+        <input type="checkbox" id="pppTypeDetail_0">
+        <label>
+            베이직
+        </label>
+        <input type="checkbox" id="pppTypeDetail_1">
+        <label>
+            배틀
+        </label>
+        <input type="checkbox" id="pppTypeDetail_2">
+        <label>
+            라이프
+        </label>
+        <input type="checkbox" id="pppTypeDetail_3">
+        <label>
+            미사용
+        </label>
+        <input type="checkbox" id="pppTypeDetail_4">
+    </p>
+
+    <h3>트위터 정보</h3>
+    <h4>트윗 성향</h4>
+    <p>
+        <label>RT</label>
+        <input type="checkbox" id="tw_personality1_0">
+        <label>마음요정</label>
+        <input type="checkbox" id="tw_personality1_1">
+        <label>폭트</label>
+        <input type="checkbox" id="tw_personality1_2">
+        <label>일상트</label>
+        <input type="checkbox" id="tw_personality1_3">
+        <label>욕트</label>
+        <input type="checkbox" id="tw_personality1_4">
+        <label>섹트</label>
+        <input type="checkbox" id="tw_personality1_5">
+        <label>우울트</label>
+        <input type="checkbox" id="tw_personality1_6">
+    </p>
+    <p>
+        <label>자캐 덕질</label>
+        <input type="checkbox" id="tw_personality2_0">
+        <label>앤캐 덕질</label>
+        <input type="checkbox" id="tw_personality2_1">
+        <label>타장르 발언</label>
+        <input type="checkbox" id="tw_personality2_2">
+        <label>탐라 대화</label>
+        <input type="checkbox" id="tw_personality2_3">
+        <label>기타: </label>
+        <input type="checkbox" id="tw_personality3_0">
+        <input type="text" id="tw_personality_etc">
+    </p>
+
+    <h4>덕질 성향</h4>
+    <p>
+        <label>GL</label>
+        <input type="checkbox" id="personality1_0">
+        <label>HL</label>
+        <input type="checkbox" id="personality1_1">
+        <label>BL</label>
+        <input type="checkbox" id="personality1_2">
+        <label>논 커플링</label>
+        <input type="checkbox" id="personality1_3">
+        <label>올라운더</label>
+        <input type="checkbox" id="personality1_4">
+        <label>기타: </label>
+        <input type="checkbox" id="personality1_5">
+        <input type="text" id="personality_etc">
+    </p>
+
+    <h4>연성 성향</h4>
+    <p>
+        <label>그림</label>
+        <input type="checkbox" id="mk_personality1_0">
+        <label>글</label>
+        <input type="checkbox" id="mk_personality1_1">
+        <label>코스프레</label>
+        <input type="checkbox" id="mk_personality1_2">
+        <label>제작</label>
+        <input type="checkbox" id="mk_personality1_3">
+        <label>소비</label>
+        <input type="checkbox" id="mk_personality1_4">
+        <label>스크린샷</label>
+        <input type="checkbox" id="mk_personality1_5">
+        <label>기타: </label>
+        <input type="checkbox" id="mk_personality2_0">
+        <input type="text" id="mk_personality_etc">
+    </p>
+
+    <h4>지뢰</h4>
+    <p>
+        <label>지뢰</label>
+        <input type="text" id="bomb_info">
+    </p>
+    <p>
+        <strong>지뢰 해결</strong>
+        <label>무시</label>
+        <input type="radio" name="bomb" value="무시">
+        <label>뮤트</label>
+        <input type="radio" name="bomb" value="뮤트">
+        <label>블락</label>
+        <input type="radio" name="bomb" value="블락">
+        <label>직멘제외 무시가능</label>
+        <input type="radio" name="bomb" value="직접 멘션 아니면 무시 가능">
+    </p>
+
+    <p><label>하고 싶은 말</label></p>
+    <p><textarea id="etc_talk" style="width:100%; height:100px; word-wrap:break-all;"></textarea></p>
+
+    <h3>최애캐 정보</h3>
+    <p class="explain">최애캐 이미지는 공식 홈페이지 배포된 C7까지의 NPC까지 지원하나 만약 없는 캐릭터일 경우 따로 이미지 입력 가능합니다. (140 x 140 px)</p>
+    <p class="explain">이름 입력 후 오른쪽에 이미지가 안뜬다면... 없는거입니다.</p>
+
+    <p>
+        <strong>최애캐 수</strong>
+        <label class="explain">설정한 개수만큼 출력됩니다. 2 나 3 중 택1.</label>
+    </p>
+    <p>
+        <label>2명</label>
+        <input type="radio" name="lover_cnt" value=2 checked>
+        <label>3명</label>
+        <input type="radio" name="lover_cnt" value=3>
+    </p>
+
+    <p id="lover_p_1">
+        <label>최애캐 이름 1: </label>
+        <input type="text" id="lover_name_1">
+        <img src="imgs/cream/lover_basic.png" id="lover_preview_img_1" width="20" height="20">
+        <label>직접 파일 입력</label>
+        <input type="checkbox" id="lover_img_insert_1">
+    </p>
+    <p id="lover_p_2">
+        <label>최애캐 이름 2: </label>
+        <input type="text" id="lover_name_2">
+        <img src="imgs/cream/lover_basic.png" id="lover_preview_img_2" width="20" height="20">
+        <label>직접 파일 입력</label>
+        <input type="checkbox" id="lover_img_insert_2">
+    </p>
+    <p id="lover_p_3">
+        <label>최애캐 이름 3: </label>
+        <input type="text" id="lover_name_3">
+        <img src="imgs/cream/lover_basic.png" id="lover_preview_img_3" width="20" height="20">
+        <label>직접 파일 입력</label>
+        <input type="checkbox" id="lover_img_insert_3">
+    </p>
+
+    <p id="lover_insert_1">
+        <label>
+            최애캐 이미지 1 :
+        </label>
+        <input type="file" id="lover_img1" accept="image/*">
+    </p>
+    <p id="lover_insert_2">
+        <label>
+            최애캐 이미지 2 :
+        </label>
+        <input type="file" id="lover_img2" accept="image/*">
+    </p>
+    <p id="lover_insert_3">
+        <label>
+            최애캐 이미지 3 :
+        </label>
+        <input type="file" id="lover_img3" accept="image/*">
+    </p>
+
+    <h2>이미지 결과물</h2>
+    <p>
+        <button id="apply">이미지 적용</button>
+        <button id="download">다운로드</button>
+    </p>
+    <div id="canvas_frame">
+        <canvas id="canvas" width="1200" height="849" style="position: relative;"></canvas>
+    </div>
+
+    <br>
+
+    <div class="use_info">
+        <p>이 페이지는 크림야옹님(https://blog.naver.com/tarte__/221176654878)께서 배포해주신 틀을 사용하였습니다.</p>
+        <p>이 페이지에서 생성한 이미지는 비영리적인 선에서 자유롭게 사용하실 수 있습니다.</p>
+        <p>출처 아이디만 지우지 말아주세요!</p>
+        <p>이미지에 사용된 게임 로고 이미지, 캐릭터 포트레이트 이미지의 저작권은 (주)넥슨코리아에 있습니다.</p>
+    </div>
+</section>
+
+<div id="footer"></div>
+
+</body>
+</html>
