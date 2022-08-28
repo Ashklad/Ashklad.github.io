@@ -139,3 +139,27 @@ div.footer > p > span {
 html {
     font-size: 0.8rem;
 }
+
+table.select_table {
+    width: 100%;
+    text-align: center;
+    table-layout: fixed;
+    border: 2px #e1e9ed;
+}
+table.select_table > tbody > tr > td {
+    color: rgb(255, 255, 255);
+}
+table.select_table label {
+    width: 100%;
+    height: 100%;
+    background-color: #88a5ba;
+    background-size: cover;
+    display: block;
+}
+table.select_table > tbody > tr > td > input:checked + label {
+    background-color: #d5dc92;
+}
+
+table.select_table > tbody td > input {
+    display: none;
+}

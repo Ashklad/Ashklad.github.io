@@ -78,8 +78,8 @@ $(document).ready(function() {
 
     function draw() {
         // imgs
-        var profile_img = document.getElementById("basic_profile")
-        var sheet_img = document.getElementById("basic_sheet")
+        var profile_img = document.getElementById("basic_profile");
+        var sheet_img = document.getElementById("basic_sheet");
         var lover_img1 = document.getElementById("lover_img_obj_1");
         var lover_img2 = document.getElementById("lover_img_obj_2");
         var lover_img3 = document.getElementById("lover_img_obj_3");
@@ -113,6 +113,7 @@ $(document).ready(function() {
         var lover_img_src_3 = "./imgs/cream/npcs/" + lover_name_3 + ".png"
 
         var font_color = $("#font_color").val();
+        var font_select = $("#font").val();
 
         // radio var
         var sheet_type = document.getElementsByName("sheet_type");
@@ -152,9 +153,10 @@ $(document).ready(function() {
         }
 
         //  ---------------- img & color ----------------- //
-        ctx.fillStyle = "#000000"
-        ctx.fillRect(canvas.width, canvas.height, 0, 0); // clear canvas
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(50, 260, 300, 300); // clear backplate
         drawRatio(ctx, profile_img, 195, 195, 43, 330); // profile img
+        ctx.fillStyle = "#000000"
         // color
         // color set
         var color_list = []
@@ -191,7 +193,7 @@ $(document).ready(function() {
             ctx.fillStyle = "#ffffff"
         }
         // check npc
-        ctx.fillRect(600, 150, 600, 420);
+        ctx.fillRect(600, 150, 600, 420); // clear backplate
         drawRatio(ctx, lover_img1, 140, 140, 720, 420); // npc 1 img
         drawRatio(ctx, lover_img2, 140, 140, 865, 420); // npc 2 img
         drawRatio(ctx, lover_img3, 140, 140, 1010, 420); // npc 3 img
@@ -225,7 +227,9 @@ $(document).ready(function() {
 
         //  ---------------- img & color ----------------- //
         // font set
-        ctx.font = '18px NexonLv2GothicBold';
+        ctx.font = '18px '+font_select;
+
+        //ctx.font = '18px NexonLv2Gothic';
         // ctx.font = "20px "+select_font;
         ctx.fillStyle = font_color;
 
@@ -240,9 +244,12 @@ $(document).ready(function() {
         ctx.fillText(level, 370, 455);
         ctx.fillText(guild, 340, 490);
 
-        ctx.fillText(color1_name, 133, 738);
-        ctx.fillText(color2_name, 238, 738);
-        ctx.fillText(color3_name, 340, 738);
+        ctx.textAlign='center';
+        ctx.fillText(color1_name, 170, 738, 80);
+        ctx.fillText(color2_name, 273, 738, 80);
+        ctx.fillText(color3_name, 378, 738, 80);
+        ctx.textAlign='start';
+
         ctx.fillText(bomb_info, 710, 613);
 
         // selectDraw
@@ -344,21 +351,6 @@ $(document).ready(function() {
         link.download = prefix + Date.now() + '.png';
         link.href = document.getElementById('canvas').toDataURL()
         link.click();
-    }
-
-    function colorChange(e, colorObj) {
-	    colorObj = this.value;
-	}
-
-	function hexToRgb(hex) {
-        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-        if(result){
-            var r= parseInt(result[1], 16);
-            var g= parseInt(result[2], 16);
-            var b= parseInt(result[3], 16);
-            return r+","+g+","+b;//return 23,14,45 -> reformat if needed
-        }
-        return null;
     }
 
     $('#apply').click(function() {

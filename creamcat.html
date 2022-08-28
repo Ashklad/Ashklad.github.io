@@ -34,11 +34,21 @@
     <h3>시트 설정</h3>
     <p>
         <label>글씨색</label>
-        <input type="color" id="font_color" value="#3e3e3e">
+        <input type="color" id="font_color" value="#111111">
     </p>
     <p>
         <label>하이라이트색</label>
         <input type="color" id="highlight" value="#56bbc3">
+    </p>
+    <p>
+        <label>
+            폰트 선택 :
+        </label>
+        <select name="font" id="font">
+            <option value="NexonLv2Gothic">넥슨LV2고딕</option>
+            <option value="NexonLv2GothicBold">넥슨LV2고딕굵음</option>
+            <option value="NanumGothic">나눔고딕</option>
+        </select>
     </p>
     <p>
         <strong>시트 종류</strong>
@@ -155,58 +165,88 @@
         <input type="text" name="guild" id="guild">
     </p>
     <h4>플레이타입</h4>
-    <p>
-        <label>
-            석상
-        </label>
-        <input type="checkbox" id="playType1_0">
-        <label>
-            사냥
-        </label>
-        <input type="checkbox" id="playType1_1">
-        <label>
-            합주
-        </label>
-        <input type="checkbox" id="playType1_2">
-        <label>
-            의장
-        </label>
-        <input type="checkbox" id="playType1_3">
-        <label>
-            마감
-        </label>
-        <input type="checkbox" id="playType1_4">
-        <label>
-            수련
-        </label>
-        <input type="checkbox" id="playType1_5">
-        <label>
-            수집
-        </label>
-        <input type="checkbox" id="playType1_6">
-        <label>
-            미니게임
-        </label>
-        <input type="checkbox" id="playType1_7">
-    </p>
-    <p>
-        <label>
-            탐험
-        </label>
-        <input type="checkbox" id="playType2_0">
-        <label>
-            저널
-        </label>
-        <input type="checkbox" id="playType2_1">
-        <label>
-            제작
-        </label>
-        <input type="checkbox" id="playType2_2">
-        <label>
-            판매
-        </label>
-        <input type="checkbox" id="playType2_3">
-    </p>
+
+    <table class="select_table">
+        <tbody>
+            <tr>
+                <td>
+                    <input type="checkbox" id="playType1_0">
+                    <label for="playType1_0">
+                        석상
+                    </label>
+                </td>
+                <td>
+                    <input type="checkbox" id="playType1_1">
+                    <label for="playType1_1">
+                        사냥
+                    </label>
+                </td>
+                <td>
+                    <input type="checkbox" id="playType1_2">
+                    <label for="playType1_2">
+                        합주
+                    </label>
+                </td>
+                <td>
+                    <input type="checkbox" id="playType1_3">
+                    <label for="playType1_3">
+                        의장
+                    </label>
+                </td>
+                <td>
+                    <input type="checkbox" id="playType1_4">
+                    <label for="playType1_4">
+                        마감
+                    </label>
+                </td>
+                <td>
+                    <input type="checkbox" id="playType1_5">
+                    <label for="playType1_5">
+                        수련
+                    </label>
+                </td>
+                <td>
+                    <input type="checkbox" id="playType1_6">
+                    <label for="playType1_6">
+                        수집
+                    </label>
+                </td>
+                <td>
+                    <input type="checkbox" id="playType1_7">
+                    <label for="playType1_7">
+                        미니게임
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="playType2_0">
+                    <label for="playType2_0">
+                        탐험
+                    </label>
+                </td>
+                <td>
+                    <input type="checkbox" id="playType2_1">
+                    <label for="playType2_1">
+                        저널
+                    </label>
+                </td>
+                <td>
+                    <input type="checkbox" id="playType2_2">
+                    <label for="playType2_2">
+                        제작
+                    </label>
+                </td>
+                <td>
+                    <input type="checkbox" id="playType2_3">
+                    <label for="playType2_3">
+                        판매
+                    </label>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
 
     <h4>지향색</h4>
     <p>
@@ -285,69 +325,142 @@
 
     <h3>트위터 정보</h3>
     <h4>트윗 성향</h4>
+    <table class="select_table">
+        <tbody>
+            <tr>
+                <td>
+                    <input type="checkbox" id="tw_personality1_0">
+                    <label for="tw_personality1_0">RT</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="tw_personality1_1">
+                    <label for="tw_personality1_1">마음요정</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="tw_personality1_2">
+                    <label for="tw_personality1_2">폭트</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="tw_personality1_3">
+                    <label for="tw_personality1_3">일상트</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="tw_personality1_4">
+                    <label for="tw_personality1_4">욕트</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="tw_personality1_5">
+                    <label for="tw_personality1_5">섹트</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="tw_personality1_6">
+                    <label for="tw_personality1_6">우울트</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="tw_personality2_0">
+                    <label for="tw_personality2_0">자캐 덕질</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="tw_personality2_1">
+                    <label for="tw_personality2_1">앤캐 덕질</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="tw_personality2_2">
+                    <label for="tw_personality2_2">타장르 발언</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="tw_personality2_3">
+                    <label for="tw_personality2_3">탐라 대화</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="tw_personality3_0">
+                    <label for="tw_personality2_4">기타</label>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <p>
-        <label>RT</label>
-        <input type="checkbox" id="tw_personality1_0">
-        <label>마음요정</label>
-        <input type="checkbox" id="tw_personality1_1">
-        <label>폭트</label>
-        <input type="checkbox" id="tw_personality1_2">
-        <label>일상트</label>
-        <input type="checkbox" id="tw_personality1_3">
-        <label>욕트</label>
-        <input type="checkbox" id="tw_personality1_4">
-        <label>섹트</label>
-        <input type="checkbox" id="tw_personality1_5">
-        <label>우울트</label>
-        <input type="checkbox" id="tw_personality1_6">
-    </p>
-    <p>
-        <label>자캐 덕질</label>
-        <input type="checkbox" id="tw_personality2_0">
-        <label>앤캐 덕질</label>
-        <input type="checkbox" id="tw_personality2_1">
-        <label>타장르 발언</label>
-        <input type="checkbox" id="tw_personality2_2">
-        <label>탐라 대화</label>
-        <input type="checkbox" id="tw_personality2_3">
-        <label>기타: </label>
-        <input type="checkbox" id="tw_personality3_0">
+        <label>기타 : </label>
         <input type="text" id="tw_personality_etc">
     </p>
 
     <h4>덕질 성향</h4>
+    <table class="select_table">
+        <tbody>
+            <tr>
+                <td>
+                    <input type="checkbox" id="personality1_0">
+                    <label for="personality1_0">GL</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="personality1_1">
+                    <label for="personality1_1">HL</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="personality1_2">
+                    <label for="personality1_2">BL</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="personality1_3">
+                    <label for="personality1_3">논 커플링</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="personality1_4">
+                    <label for="personality1_4">올라운더</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="personality1_5">
+                    <label for="personality1_5">기타</label>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <p>
-        <label>GL</label>
-        <input type="checkbox" id="personality1_0">
-        <label>HL</label>
-        <input type="checkbox" id="personality1_1">
-        <label>BL</label>
-        <input type="checkbox" id="personality1_2">
-        <label>논 커플링</label>
-        <input type="checkbox" id="personality1_3">
-        <label>올라운더</label>
-        <input type="checkbox" id="personality1_4">
-        <label>기타: </label>
-        <input type="checkbox" id="personality1_5">
+        <label>기타 : </label>
         <input type="text" id="personality_etc">
     </p>
 
     <h4>연성 성향</h4>
+    <table class="select_table">
+        <tbody>
+            <tr>
+                <td>
+                    <input type="checkbox" id="mk_personality1_0">
+                    <label for="mk_personality1_0">그림</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="mk_personality1_1">
+                    <label for="mk_personality1_1">글</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="mk_personality1_2">
+                    <label for="mk_personality1_2">코스프레</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="mk_personality1_3">
+                    <label for="mk_personality1_3">제작</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="mk_personality1_4">
+                    <label for="mk_personality1_4">소비</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="mk_personality1_5">
+                    <label for="mk_personality1_5">스크린샷</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="mk_personality2_0">
+                    <label for="mk_personality2_0">기타</label>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <p>
-        <label>그림</label>
-        <input type="checkbox" id="mk_personality1_0">
-        <label>글</label>
-        <input type="checkbox" id="mk_personality1_1">
-        <label>코스프레</label>
-        <input type="checkbox" id="mk_personality1_2">
-        <label>제작</label>
-        <input type="checkbox" id="mk_personality1_3">
-        <label>소비</label>
-        <input type="checkbox" id="mk_personality1_4">
-        <label>스크린샷</label>
-        <input type="checkbox" id="mk_personality1_5">
         <label>기타: </label>
-        <input type="checkbox" id="mk_personality2_0">
         <input type="text" id="mk_personality_etc">
     </p>
 
